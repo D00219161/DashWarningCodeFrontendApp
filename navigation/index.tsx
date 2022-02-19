@@ -14,7 +14,8 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import DashWarningScreen from '../screens/DashWarningScreen';
+import TabThreeScreen from '../screens/TabThreeScreen';
+import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -58,16 +59,16 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="DashWarning"
+      initialRouteName="TabOne"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="DashWarning"
-        component={DashWarningScreen}
-        options={({ navigation }: RootTabScreenProps<'DashWarning'>) => ({
+        name="TabOne"
+        component={TabOneScreen}
+        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
           title: 'Dash Warning',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Modal')}
@@ -89,7 +90,15 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="TabThree"
+        component={TabThreeScreen}
+        options={{
+          title: 'Roadside Assistance',
+          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
         }}
       />
     </BottomTab.Navigator>

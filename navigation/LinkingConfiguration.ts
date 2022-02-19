@@ -15,18 +15,23 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          DashWarning: {
+          TabOne: {
             screens: {
-              DashWarningScreen: 'DashWarning',
+              TabOneScreen: 'one',
             },
           },
           TabTwo: {
             screens: {
               TabTwoScreen: 'two',
             },
+          }, 
+          TabThree: {
+            screens: {
+              TabThreeScreen: 'three',
+            },
           },
-        },
       },
+    },
       Modal: 'modal',
       NotFound: '*',
     },
