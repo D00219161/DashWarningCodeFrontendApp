@@ -15,10 +15,12 @@ import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 
-import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ServiceScreen from '../screens/ServiceScreen';
-import ScanScreen  from '../screens/ScanScreen';
+import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
+import ScanScreen from '../screens/ScanScreen';
+import SigninScreen from '../screens/SigninScreen';
+import CreateAccountScreen from '../screens/CreateAccountScreen';
 
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -46,6 +48,8 @@ function RootNavigator() {
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
+        <Stack.Screen name="Signin" component={SigninScreen} />
+        <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
         <Stack.Screen name="Scan" component={ScanScreen} />
       </Stack.Group>
     </Stack.Navigator>
@@ -118,7 +122,8 @@ function TabBarIcon(props: {
 }) {
   return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
 }
-function createTabNavigator<T>() {
+
+function createTabStackNavigator<T>() {
   throw new Error('Function not implemented.');
 }
 

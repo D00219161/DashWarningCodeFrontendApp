@@ -21,32 +21,32 @@ const linking: LinkingOptions<RootStackParamList> = {
           },
           Signin: {
             screens: {
-              SigninScreen: 'Signin',
+              SigninScreen: 'signin',
             },
           }, 
           CreateAccount: {
             screens: {
-              CreateAccountScreen: 'Create Account',
+              CreateAccountScreen: 'createaccount',
             },
           }, 
           UserAccount: {
             screens: {
-              UserAccountScreen: 'User Account',
+              UserAccountScreen: 'useraccount',
             },
           },
           Scan: {
             screens: {
-              ScanScreen: 'Scan',
+              ScanScreen: 'scan',
             },
           }, 
           Scanning: {
             screens: {
-              ScanningScreen: 'Scanning',
+              ScanningScreen: 'scanning',
             },
           },  
           Display: {
             screens: {
-              DisplayScreen: 'Display',
+              DisplayScreen: 'display',
             },
           },   
           Service: {
@@ -56,32 +56,32 @@ const linking: LinkingOptions<RootStackParamList> = {
           }, 
           MostCommonFaults: {
             screens: {
-              MostCommonFaultsScreen: 'MostCommonFaults',
+              MostCommonFaultsScreen: 'mostcommonfaults',
             },
           }, 
           RedFaults: {
             screens: {
-              RedFaultsScreen: 'RedFaults',
+              RedFaultsScreen: 'redfaults',
             },
           },
           AmberFaults: {
             screens: {
-              AmberFaultsScreen: 'AmberFaults',
+              AmberFaultsScreen: 'amberfaults',
             },
           },
           GreenFaults: {
             screens: {
-              GreenFaultsScreen: 'GreenFaults',
+              GreenFaultsScreen: 'greenfaults',
             },
           },
           ElectricFaults: {
             screens: {
-              ElectricFaultsScreen: 'ElectricFaults',
+              ElectricFaultsScreen: 'electricfaults',
             },
           },
           Forum: {
             screens: {
-              ForumScreen: 'Forum',
+              ForumScreen: 'forum',
             },
           },
       },

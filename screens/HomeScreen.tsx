@@ -5,8 +5,8 @@ import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
 // Background Image
-import localImage from '../assets/images/background-image/Background-Image.png';
-import navigation from '../navigation';
+/**import localImage from '../assets/images/background-image/Background-Image.png';
+import navigation from '../navigation';**/
 
 // const localImage = require("../assets/images/background-image/Background-Image.png");
 
@@ -16,17 +16,16 @@ const Separator = () => (
 
 export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
-    <ImageBackground source={localImage} style={styles.container}>
     <View style={styles.container}>
         <Text style={styles.title}>Welcome To Dash Warning</Text>       
         <div>
         <Text style={styles.title}>Already Have An Account?</Text>   
-        <Button title="Login" onPress={() => navigation.navigate('Service')} />
+        <Button title="Login" onPress={() => navigation.navigate('Signin')} />
 
         <Separator />
 
         <Text style={styles.title}></Text>   
-        <Button title="Create Account" onPress={() => navigation.navigate('Service')} />
+        <Button title="Create Account" onPress={() => navigation.navigate('CreateAccount')} />
 
         <Separator />
 
@@ -34,7 +33,6 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
         <Button title="Not Now" onPress={() => navigation.navigate('Scan')} />
         </div>
       </View>
-      </ImageBackground>
   );
 }
 
@@ -61,8 +59,4 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
-  image:
-  {
-
-  }
 });
