@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -14,9 +14,10 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabThreeScreen from '../screens/TabThreeScreen';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+
+import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
+import HomeScreen from '../screens/HomeScreen';
+import ServiceScreen from '../screens/ServiceScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -59,14 +60,14 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        name="Home"
+        component={HomeScreen}
+        options={({ navigation }: RootTabScreenProps<'Home'>) => ({
           title: 'Dash Warning',
           tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
           headerRight: () => (
@@ -86,18 +87,18 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="Service"
+        component={ServiceScreen}
         options={{
-          title: 'Tab Two',
+          title: 'Roadside Assistance',
           tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="TabThree"
-        component={TabThreeScreen}
+        name="MostCommonFaults"
+        component={MostCommonFaultsScreen}
         options={{
-          title: 'Roadside Assistance',
+          title: 'Most Common Faults',
           tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
         }}
       />
