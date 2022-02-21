@@ -27,8 +27,19 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 // Number of Screens - Roots (Either Numbers or Name of Pages) - Linking
 export type RootTabParamList = {
   Home: undefined;
+  CreateAccount: undefined;
+  Signin: undefined;
+  UserAccount: undefined;
+  Scan: undefined;
+  Scanning: undefined;
+  Display: undefined;
   Service: undefined;
   MostCommonFaults: undefined;
+  RedFaults: undefined;
+  AmberFaults: undefined;
+  GreenFaults: undefined;
+  ElectricFaults: undefined;
+  Forum: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

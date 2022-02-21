@@ -8,7 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { ColorSchemeName, Pressable } from 'react-native';
+import { Button, ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -18,6 +18,8 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ServiceScreen from '../screens/ServiceScreen';
+import ScanScreen  from '../screens/ScanScreen';
+
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -44,6 +46,7 @@ function RootNavigator() {
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
+        <Stack.Screen name="Scan" component={ScanScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -115,3 +118,7 @@ function TabBarIcon(props: {
 }) {
   return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
 }
+function createTabNavigator<T>() {
+  throw new Error('Function not implemented.');
+}
+

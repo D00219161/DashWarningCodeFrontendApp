@@ -19,16 +19,71 @@ const linking: LinkingOptions<RootStackParamList> = {
               HomeScreen: 'home',
             },
           },
-          MostCommonFaults: {
+          Signin: {
             screens: {
-              MostCommonFaultsScreen: 'MostCommonFaults',
+              SigninScreen: 'Signin',
             },
           }, 
+          CreateAccount: {
+            screens: {
+              CreateAccountScreen: 'Create Account',
+            },
+          }, 
+          UserAccount: {
+            screens: {
+              UserAccountScreen: 'User Account',
+            },
+          },
+          Scan: {
+            screens: {
+              ScanScreen: 'Scan',
+            },
+          }, 
+          Scanning: {
+            screens: {
+              ScanningScreen: 'Scanning',
+            },
+          },  
+          Display: {
+            screens: {
+              DisplayScreen: 'Display',
+            },
+          },   
           Service: {
             screens: {
               ServiceScreen: 'service',
             },
           }, 
+          MostCommonFaults: {
+            screens: {
+              MostCommonFaultsScreen: 'MostCommonFaults',
+            },
+          }, 
+          RedFaults: {
+            screens: {
+              RedFaultsScreen: 'RedFaults',
+            },
+          },
+          AmberFaults: {
+            screens: {
+              AmberFaultsScreen: 'AmberFaults',
+            },
+          },
+          GreenFaults: {
+            screens: {
+              GreenFaultsScreen: 'GreenFaults',
+            },
+          },
+          ElectricFaults: {
+            screens: {
+              ElectricFaultsScreen: 'ElectricFaults',
+            },
+          },
+          Forum: {
+            screens: {
+              ForumScreen: 'Forum',
+            },
+          },
       },
     },
       Modal: 'modal',

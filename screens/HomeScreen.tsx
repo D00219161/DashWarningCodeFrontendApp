@@ -10,14 +10,29 @@ import navigation from '../navigation';
 
 // const localImage = require("../assets/images/background-image/Background-Image.png");
 
+const Separator = () => (
+  <View style={styles.separator} />
+);
+
 export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <ImageBackground source={localImage} style={styles.container}>
     <View style={styles.container}>
         <Text style={styles.title}>Welcome To Dash Warning</Text>       
+        <div>
+        <Text style={styles.title}>Already Have An Account?</Text>   
+        <Button title="Login" onPress={() => navigation.navigate('Service')} />
 
-        <Text>Already Have An Account?</Text>
-        <Button title="Login" onPress={() => Alert.alert('Simple Button pressed')}/>
+        <Separator />
+
+        <Text style={styles.title}></Text>   
+        <Button title="Create Account" onPress={() => navigation.navigate('Service')} />
+
+        <Separator />
+
+        <Text style={styles.title}></Text>   
+        <Button title="Not Now" onPress={() => navigation.navigate('Scan')} />
+        </div>
       </View>
       </ImageBackground>
   );
