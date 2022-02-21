@@ -12,9 +12,18 @@ const Separator = () => (
 export default function RedFaultScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <View style={styles.separator}>
-      <Text style={styles.title}>Red Faults</Text>
-      <Separator />
-      <Image source={require('../assets/images/background-image/Background-Image.png')} style={{height: 300, width: 400}}/>
+      <Text style={styles.title}>Red Faults - Serious</Text>
+      <View style={styles.box}>
+        <View style={styles.inner}>
+        <Text style={styles.title}>Brake System Warning Light</Text>       
+        </View>
+      </View>
+      
+      <View style={styles.box}>
+        <View style={styles.inner}>
+        <Text style={styles.title}>Battery Warning Light</Text>       
+          </View>
+        </View>
     </View>
   );
 }
@@ -29,7 +38,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: '#000'
+    color: '#000',
+    textAlign: 'center'
   },
   separator: {
     flex: 1,
@@ -37,5 +47,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderBottomColor: '#737373',
     borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  box:{
+    width: '20%',
+    height: '20%',
+    padding: 5,
+  },
+  inner:{
+    flex: 1,
+    backgroundColor: '#eee',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontColor: '#000'
   },
 });

@@ -28,11 +28,6 @@ const linking: LinkingOptions<RootStackParamList> = {
               CreateAccountScreen: 'createaccount',
             },
           }, 
-          UserAccount: {
-            screens: {
-              UserAccountScreen: 'useraccount',
-            },
-          },
           Scan: {
             screens: {
               ScanScreen: 'scan',
@@ -81,6 +76,11 @@ const linking: LinkingOptions<RootStackParamList> = {
           Forum: {
             screens: {
               ForumScreen: 'forum',
+            },
+          },
+          UserAccount: {
+            screens: {
+              UserAccountScreen: 'useraccount', //ISSUE
             },
           },
       },

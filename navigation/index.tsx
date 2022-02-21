@@ -13,12 +13,14 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 
 //Pages
 import HomeScreen from '../screens/HomeScreen';
-import ServiceScreen from '../screens/ServiceScreen';
-import ScanScreen from '../screens/ScanScreen';
 import SigninScreen from '../screens/SigninScreen';
 import CreateAccountScreen from '../screens/CreateAccountScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
-
+import ScanScreen from '../screens/ScanScreen';
+import ScanningScreen from '../screens/ScanningScreen';
+import DisplayScreen from '../screens/DisplayScreen';
+import ServiceScreen from '../screens/ServiceScreen';
+import ForumScreen from '../screens/ForumScreen';
 // Fault Pages
 import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
 import RedFaultScreen from '../screens/RedFaultScreen';
@@ -49,14 +51,21 @@ function RootNavigator() {
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal'}}>
         <Stack.Screen name="Modal" component={ModalScreen} />
-        <Stack.Screen name="UserAccount" component={UserAccountScreen} />
+
         <Stack.Screen name="Signin" component={SigninScreen} />
         <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
         <Stack.Screen name="Scan" component={ScanScreen} />
+        <Stack.Screen name="Scanning" component={ScanningScreen} />
+        <Stack.Screen name="Display" component={DisplayScreen} />
+        <Stack.Screen name="Service" component={ServiceScreen} />
+        <Stack.Screen name="MostCommonFaults" component={MostCommonFaultsScreen} />
         <Stack.Screen name="RedFault" component={RedFaultScreen} />
         <Stack.Screen name="AmberFault" component={AmberFaultScreen} />
         <Stack.Screen name="GreenFault" component={GreenFaultScreen} />
         <Stack.Screen name="ElectricFault" component={ElectricFaultScreen} />
+        <Stack.Screen name="Forum" component={ForumScreen} />
+        <Stack.Screen name="UserAccount" component={UserAccountScreen} />
+        
       </Stack.Group>
     </Stack.Navigator>
   );

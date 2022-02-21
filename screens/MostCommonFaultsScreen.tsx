@@ -14,33 +14,41 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
   return (
     <View style={styles.separator}>
       <Text style={styles.title}>Most Common Faults</Text>
-
       <Text onPress={() => navigation.navigate('RedFault')} style={styles.title}>Red Faults</Text>
       <View style={styles.box}>
         <View style={styles.inner}>
-        <Image style={{width: 500, height: 400}} 
-        source={require('../assets/images/RedFaults/OilPressureWarningLight.jpg')}/>
-         <Separator />
-        
+         <Text style={styles.title}></Text>
+          </View>
         </View>
-      </View>
 
+
+      <Separator />
+
+      <Text onPress={() => navigation.navigate('AmberFault')} style={styles.title}>Amber Faults</Text>
       <View style={styles.box}>
         <View style={styles.inner}>
-        <Image style={{width: 500, height: 400}} 
-        source={require('../assets/images/RedFaults/SeatbeltWarningLight.jpg')}/>
+         <Text style={styles.title}></Text>
           </View>
         </View>
 
       <Separator />
 
-      <Text onPress={() => navigation.navigate('AmberFault')} style={styles.title}>Amber Faults</Text>
-      <Separator />
-
       <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green and Blue Faults</Text>
+      <View style={styles.box}>
+        <View style={styles.inner}>
+         <Text style={styles.title}></Text>
+          </View>
+        </View>
+
       <Separator />
 
       <Text onPress={() => navigation.navigate('ElectricFault')} style={styles.title}>Electric and Hybrid Faults</Text>
+      <View style={styles.box}>
+        <View style={styles.inner}>
+         <Text style={styles.title}></Text>
+          </View>
+        </View>
+
       <Separator />
     </View>
   );
@@ -60,7 +68,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: '#000'
+    color: '#000',
+    textAlign: 'center'
   },
   separator: {
     flex: 1,
@@ -79,8 +88,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#17A99A',
   },
   box:{
-    width: '50%',
-    height: '50%',
+    width: '10%',
+    height: '10%',
     padding: 5,
   },
   inner:{
