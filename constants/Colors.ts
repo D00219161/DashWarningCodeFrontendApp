@@ -20,7 +20,7 @@ export default {
     tabIconDefault: '#fff',
     tabIconSelected: tintColorDark,
     h1Color: '#17A99A',
-    fontsize: '20px',
+    fontsize: '30px',
     borderTopColor: '#17A99A',
   },
 };

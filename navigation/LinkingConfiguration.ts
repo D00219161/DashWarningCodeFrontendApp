@@ -3,7 +3,6 @@
  * https://reactnavigation.org/docs/deep-linking
  * https://reactnavigation.org/docs/configuring-links
  */
-import React from 'react';
 import { LinkingOptions } from '@react-navigation/native';
 import * as Linking from 'expo-linking';
 import { RootStackParamList } from '../types';
@@ -59,24 +58,24 @@ const linking: LinkingOptions<RootStackParamList> = {
               MostCommonFaultsScreen: 'mostcommonfaults',
             },
           }, 
-          RedFaults: {
+          RedFault: {
             screens: {
-              RedFaultsScreen: 'redfaults',
+              RedFaultScreen: 'redfaults',
             },
           },
-          AmberFaults: {
+          AmberFault: {
             screens: {
-              AmberFaultsScreen: 'amberfaults',
+              AmberFaultScreen: 'amberfaults',
             },
           },
-          GreenFaults: {
+          GreenFault: {
             screens: {
-              GreenFaultsScreen: 'greenfaults',
+              GreenFaultScreen: 'greenfaults',
             },
           },
-          ElectricFaults: {
+          ElectricFault: {
             screens: {
-              ElectricFaultsScreen: 'electricfaults',
+              ElectricFaultScreen: 'electricfaults',
             },
           },
           Forum: {

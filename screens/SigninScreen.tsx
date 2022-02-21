@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert } from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import { Text, View } from '../components/Themed';
@@ -12,8 +12,6 @@ export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>)
   return (
     <View style={styles.container}>
         <Text style={styles.title}>Login Today</Text>       
-        <div>
-        </div>
       </View>
   );
 }

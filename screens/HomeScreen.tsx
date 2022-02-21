@@ -1,37 +1,45 @@
-import React from 'react';
-import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert } from 'react-native';
+import * as React from 'react';
+import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable } from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-// Background Image
+
 /**import localImage from '../assets/images/background-image/Background-Image.png';
 import navigation from '../navigation';**/
-
-// const localImage = require("../assets/images/background-image/Background-Image.png");
 
 const Separator = () => (
   <View style={styles.separator} />
 );
 
+// Background Image
+const localImage = require("../assets/images/background-image/Background-Image.png");
+
 export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <View style={styles.container}>
-        <Text style={styles.title}>Welcome To Dash Warning</Text>       
-        <div>
-        <Text style={styles.title}>Already Have An Account?</Text>   
-        <Button title="Login" onPress={() => navigation.navigate('Signin')} />
+       <ImageBackground source={localImage} resizeMode="cover" style={styles.image}>
+        <Text style={styles.title}>Welcome To Dash Warning</Text>      
+        <Separator /> 
+        <Text style={styles.text}>Already Have An Account?</Text>   
+        <Pressable style={styles.button} onPress={() => navigation.navigate('Signin')}>
+        <Text style={styles.text}>Login</Text>
+        </Pressable> 
+      
+        <Separator />
+
+        <Text style={styles.text}></Text>  
+        <Pressable style={styles.button} onPress={() => navigation.navigate('CreateAccount')}>
+        <Text style={styles.text}>Create Account</Text>
+        </Pressable> 
 
         <Separator />
 
-        <Text style={styles.title}></Text>   
-        <Button title="Create Account" onPress={() => navigation.navigate('CreateAccount')} />
-
-        <Separator />
-
-        <Text style={styles.title}></Text>   
-        <Button title="Not Now" onPress={() => navigation.navigate('Scan')} />
-        </div>
+        <Text style={styles.text}></Text>   
+        <Pressable style={styles.button} onPress={() => navigation.navigate('Scan')}>
+        <Text style={styles.text}>Not Now</Text>
+        </Pressable>
+        </ImageBackground>
       </View>
   );
 }
@@ -39,7 +47,9 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
 /** Routing Between Pages
  * <TouchableOpacity onPress={() => navigation.navigate('MostCommonFaults')}style={styles.link}>
         <Text style={styles.linkText}>Go to home screen!</Text>
-      </TouchableOpacity>**/
+      </TouchableOpacity>
+      
+      <Button title="Login" onPress={() => navigation.navigate('Signin')} />**/
 
 const styles = StyleSheet.create({
   container: {
@@ -49,14 +59,33 @@ const styles = StyleSheet.create({
     borderTopColor: '#17A99A',
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#000'
     //: '#17A99A',
   },
+  text: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#000',
+    alignItems: 'center',
+  },
   separator: {
     marginVertical: 30,
     height: 1,
-    width: '80%',
+    width: '100%',
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#17A99A',
   },
 });

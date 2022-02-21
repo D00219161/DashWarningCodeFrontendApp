@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert } from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import { Text, View } from '../components/Themed';
@@ -12,9 +12,7 @@ export default function ScanScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <View style={styles.container}>
         <Text style={styles.title}></Text>       
-        <div>
         <Button title="Scan" onPress={() => navigation.navigate('Scan')} />
-        </div>
       </View>
   );
 }
@@ -32,7 +30,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#17A99A',
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#000'
     //: '#17A99A',
@@ -40,6 +38,6 @@ const styles = StyleSheet.create({
   separator: {
     marginVertical: 30,
     height: 1,
-    width: '80%',
+    width: '100%',
   },
 });
