@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   box:{
-    width: '20%',
+    width: '80%',
     height: '20%',
     padding: 5,
   },
@@ -58,6 +58,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#eee',
     alignItems: 'center',
     justifyContent: 'center',
-    fontColor: '#000'
   },
 });

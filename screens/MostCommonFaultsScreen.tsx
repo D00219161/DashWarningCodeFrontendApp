@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   separator: {
-    flex: 1,
+    flex: 1, 
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomColor: '#737373',
@@ -88,9 +88,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#17A99A',
   },
   box:{
-    width: '10%',
+    width: '80%',
     height: '10%',
-    padding: 5,
+    padding: 2,
   },
   inner:{
     flex: 1,

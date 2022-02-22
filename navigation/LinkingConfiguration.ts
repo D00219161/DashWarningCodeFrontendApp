@@ -85,7 +85,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           },
       },
     },
-      Modal: 'modal',
+      Modal: 'modal', //Navbar element - popout menu
       NotFound: '*',
     },
   },
