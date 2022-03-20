@@ -78,9 +78,24 @@ const linking: LinkingOptions<RootStackParamList> = {
               ForumScreen: 'forum',
             },
           },
+          UserInput: {
+            screens: {
+              UserInputScreen: 'userinput',
+            },
+          },
+          QA: {
+            screens: {
+              QAScreen: 'QA',
+            },
+          },
           UserAccount: {
             screens: {
               UserAccountScreen: 'useraccount', //ISSUE
+            },
+          },
+          NavBar:{
+            screens: {
+              NavBarScreen: 'navbar',
             },
           },
       },

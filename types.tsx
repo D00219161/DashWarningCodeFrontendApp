@@ -46,6 +46,9 @@ export type RootStackParamList = {
   GreenFault: undefined;
   ElectricFault: undefined;
   Forum: undefined;
+  UserInput: undefined;
+  QA: undefined;
+  NavBar: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -69,6 +72,9 @@ export type RootTabParamList = {
   GreenFault: undefined;
   ElectricFault: undefined;
   Forum: undefined;
+  UserInput: undefined;
+  QA: undefined;
+  NavBar: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

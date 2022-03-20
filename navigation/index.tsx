@@ -21,6 +21,7 @@ import ScanningScreen from '../screens/ScanningScreen';
 import DisplayScreen from '../screens/DisplayScreen';
 import ServiceScreen from '../screens/ServiceScreen';
 import ForumScreen from '../screens/ForumScreen';
+
 // Fault Pages
 import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
 import RedFaultScreen from '../screens/RedFaultScreen';
@@ -28,9 +29,12 @@ import AmberFaultScreen from '../screens/AmberFaultScreen';
 import GreenFaultScreen from '../screens/GreenFaultScreen';
 import ElectricFaultScreen from '../screens/ElectricFaultScreen';
 
+import UserInputScreen from '../screens/UserInputScreen';
+import QAScreen from '../screens/QAScreen';
 
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import NavBarScreen from '../screens/ModalScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -65,6 +69,9 @@ function RootNavigator() {
         <Stack.Screen name="ElectricFault" component={ElectricFaultScreen} />
         <Stack.Screen name="Forum" component={ForumScreen} />
         <Stack.Screen name="UserAccount" component={UserAccountScreen} />
+
+        <Stack.Screen name="UserInput" component={UserInputScreen} />
+        <Stack.Screen name="QA" component={QAScreen} />
         
       </Stack.Group>
     </Stack.Navigator>

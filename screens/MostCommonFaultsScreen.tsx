@@ -41,15 +41,7 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
         </View>
 
       <Separator />
-
-      <Text onPress={() => navigation.navigate('ElectricFault')} style={styles.title}>Electric and Hybrid Faults</Text>
-      <View style={styles.box}>
-        <View style={styles.inner}>
-         <Text style={styles.title}></Text>
-          </View>
-        </View>
-
-      <Separator />
+      
     </View>
   );
 }
