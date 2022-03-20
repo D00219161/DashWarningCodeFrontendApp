@@ -17,10 +17,14 @@ export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home
     <Text style={styles.title}>Enter Fault Details</Text>   
     <Separator/>
 
-    <Text style={styles.title}>Car Type - Make</Text>   
-    <Text style={styles.title}>Colour of Fault</Text>   
-    <Text style={styles.title}>Describe Fault</Text>   
-    <Text style={styles.title}>Time Detected</Text>   
+    <Text style={styles.title}>Car Type - Make</Text> 
+
+    <Text style={styles.title}>Colour of Fault</Text> 
+
+    <Text style={styles.title}>Describe Fault</Text> 
+
+    <Text style={styles.title}>Time Detected</Text>  
+     
     <Text style={styles.title}>Location</Text>  
 
     <Separator/>
