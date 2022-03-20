@@ -14,52 +14,22 @@ const Separator = () => (
 export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <View style={styles.container}>
-    <Text style={styles.title}>Detect Fault Q&A</Text>   
+    <Text style={styles.title}>Enter Fault Details</Text>   
     <Separator/>
 
-    <Text style={styles.title}>What Colour if the Fault</Text>   
-    <Pressable style={styles.button} onPress={() => navigation.navigate('RedFault')}>
-    <Text style={styles.text}>Red</Text>
-    </Pressable>
-
-    <Pressable style={styles.button} onPress={() => navigation.navigate('AmberFault')}>
-    <Text style={styles.text}>Amber</Text>
-    </Pressable>
-
-    <Pressable style={styles.button} onPress={() => navigation.navigate('GreenFault')}>
-    <Text style={styles.text}>Green / Blue</Text>
-    </Pressable>
+    <Text style={styles.title}>Car Type - Make</Text>   
+    <Text style={styles.title}>Colour of Fault</Text>   
+    <Text style={styles.title}>Describe Fault</Text>   
+    <Text style={styles.title}>Time Detected</Text>   
+    <Text style={styles.title}>Location</Text>  
 
     <Separator/>
 
-    <Text style={styles.title}>How Many Times did it appear</Text> 
     <Button
-    title="1"
-    onPress={() => Alert.alert('Button Pressed')}
-  />
-   <Button
-    title="2"
-    onPress={() => Alert.alert('Button Pressed')}
-  />
-   <Button
-    title="3"
-    onPress={() => Alert.alert('Button Pressed')}
-  />
-   <Button
-    title="4"
-    onPress={() => Alert.alert('Button Pressed')}
-  />
-  <Separator/>
+        title="Suggest Fault"
+        onPress={() => Alert.alert('Button Pressed')}
+      />
 
-  <Text style={styles.title}>Did the fault produce any sound?</Text> 
-  <Button
-    title="Yes"
-    onPress={() => Alert.alert('Button Pressed')}
-  />
-  <Button
-    title="No"
-    onPress={() => Alert.alert('Button Pressed')}
-  />
   </View>
   );
 }
