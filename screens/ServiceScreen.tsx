@@ -1,5 +1,5 @@
 // Roadside Assistance Page
-import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import { getFocusedRouteNameFromRoute, NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
 import { StyleSheet, Button, Alert, Image, TouchableOpacity, Pressable} from 'react-native';
 import { Text, View } from '../components/Themed';
@@ -9,9 +9,10 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
-export default function ServiceScreen({ navigation }: RootTabScreenProps<'Home'>) {
+export default function ServiceScreen({ navigation }: RootTabScreenProps<'Service'>) {
   return (
     <View style={styles.container}>
+  
       <Text style={styles.title}>Roadside Assistance Numbers</Text>
       <Separator />
       <Text style={styles.title}>AA Roadside Assistance</Text>

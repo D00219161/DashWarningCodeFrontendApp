@@ -13,16 +13,18 @@ export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>)
     <View style={styles.container}>
         <Text style={styles.title}>Login To Your Account</Text>   
 
-
-        <Separator/>
-
+        <Text style={styles.title}>Username</Text>   
+        <Text style={styles.title}>Password</Text>   
+  
         <Pressable style={styles.button} onPress={() => navigation.navigate('Signin')}>
         <Text style={styles.text}>Log On</Text>
         </Pressable>   
 
+        <Separator/>
+
         <Pressable style={styles.button} onPress={() => navigation.navigate('Home')}>
         <Text style={styles.text}>Cancel</Text>
-        </Pressable> 
+        </Pressable>
 
         <Separator/>
 
@@ -30,8 +32,7 @@ export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>)
         <Pressable style={styles.button} onPress={() => navigation.navigate('CreateAccount')}>
         <Text style={styles.text}>Create</Text>
         </Pressable> 
-
-      </View>
+    </View>   
   );
 }
 
@@ -64,13 +65,24 @@ const styles = StyleSheet.create({
     color: '#000',
     alignItems: 'center',
   },
+  button1:{
+    backgroundColor: 'green',
+    flexDirection: 'row',
+    width: '40%',
+    height: 40,
+  },
+  button2:{
+    backgroundColor: 'green',
+    flexDirection: 'row',
+    width: '40%',
+    height: 40,
+  },
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
     backgroundColor: '#17A99A',
+    flexDirection: 'row',
+    width: '40%',
+    height: 60,
   },
 });

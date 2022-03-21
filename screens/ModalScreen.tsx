@@ -12,7 +12,7 @@ export default function NavBarScreen({ navigation }: RootTabScreenProps<'Home'>)
   return (
     <View style={styles.container}>
     
-    <Text onPress={() => navigation.navigate('QA')} style={styles.title}>Detect Fault QandA Forum</Text>
+    <Text onPress={() => navigation.navigate('QA')} style={styles.title}>Detect Fault Q&A Forum</Text>
     <Separator /> 
 
     <Text onPress={() => navigation.navigate('MostCommonFaults')} style={styles.title}>Most Common Faults</Text>

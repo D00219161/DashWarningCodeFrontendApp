@@ -5,6 +5,7 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
+import Navigator from './routes/homeStack';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -21,3 +22,4 @@ export default function App() {
     );
   }
 }
+// <Navigation colorScheme={colorScheme} />

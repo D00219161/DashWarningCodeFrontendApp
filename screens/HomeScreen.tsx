@@ -25,12 +25,18 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
         <Pressable style={styles.button} onPress={() => navigation.navigate('Signin')}>
         <Text style={styles.text}>Login</Text>
         </Pressable> 
-      
+
         <Separator />
 
         <Pressable style={styles.button} onPress={() => navigation.navigate('UserInput')}>
         <Text style={styles.text}>Enter Details</Text>
         </Pressable> 
+
+        <Separator />
+
+        <Pressable style={styles.button} onPress={() => navigation.navigate('QA')}>
+        <Text style={styles.text}>Detect Fault</Text>
+        </Pressable>
         </ImageBackground>
       </View>
   );

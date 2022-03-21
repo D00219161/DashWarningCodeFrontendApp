@@ -11,26 +11,8 @@ declare global {
 }
 
 // NavBar
-/**export type createDrawerNavigator ={
-  Home: undefined;
-  CreateAccount: undefined;
-  Signin: undefined;
-  UserAccount: undefined;
-  Scan: undefined;
-  Scanning: undefined;
-  Display: undefined;
-  Service: undefined;
-  MostCommonFaults: undefined;
-  RedFault: undefined;
-  AmberFault: undefined;
-  GreenFault: undefined;
-  ElectricFault: undefined;
-  Forum: undefined;
-};**/
-
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
-  Modal: undefined;
   NotFound: undefined;
   Home: undefined;
   CreateAccount: undefined;
@@ -44,11 +26,10 @@ export type RootStackParamList = {
   RedFault: undefined;
   AmberFault: undefined;
   GreenFault: undefined;
-  ElectricFault: undefined;
   Forum: undefined;
   UserInput: undefined;
   QA: undefined;
-  NavBar: undefined;
+  Nav: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -70,7 +51,6 @@ export type RootTabParamList = {
   RedFault: undefined;
   AmberFault: undefined;
   GreenFault: undefined;
-  ElectricFault: undefined;
   Forum: undefined;
   UserInput: undefined;
   QA: undefined;
