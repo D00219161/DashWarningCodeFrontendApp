@@ -2,9 +2,11 @@
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import * as React from 'react';
 import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
+import CButton from "./CButton";
 
 const Separator = () => (
   <View style={styles.separator} />
@@ -12,56 +14,64 @@ const Separator = () => (
 
 export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
+    <ScrollView>
     <View style={styles.container}>
         <Text style={styles.title}>Detect Fault Q&A</Text>   
-        <Separator/>
 
         <Text style={styles.title}>What Colour if the Fault</Text>   
         <Pressable style={styles.button} onPress={() => navigation.navigate('RedFault')}>
         <Text style={styles.text}>Red</Text>
         </Pressable>
 
+        <Separator/>
+
         <Pressable style={styles.button} onPress={() => navigation.navigate('AmberFault')}>
         <Text style={styles.text}>Amber</Text>
         </Pressable>
 
+        <Separator/>
         <Pressable style={styles.button} onPress={() => navigation.navigate('GreenFault')}>
         <Text style={styles.text}>Green / Blue</Text>
         </Pressable>
 
-        <Separator/>
-
         <Text style={styles.title}>How Many Times did it appear</Text> 
-        <Button
-        title="1"
-        onPress={() => Alert.alert('Button Pressed')}
-      />
-       <Button
-        title="2"
-        onPress={() => Alert.alert('Button Pressed')}
-      />
-       <Button
-        title="3"
-        onPress={() => Alert.alert('Button Pressed')}
-      />
-       <Button
-        title="4"
-        onPress={() => Alert.alert('Button Pressed')}
-      />
+        <Pressable style={styles.button} onPress={() => Alert.alert('Button Pressed')}>
+        <Text style={styles.text}>1</Text>
+        </Pressable>
+      
       <Separator/>
+      <Pressable style={styles.button} onPress={() => Alert.alert('Button Pressed')}>
+        <Text style={styles.text}>2</Text>
+        </Pressable>
+
+      <Separator/>
+      <Pressable style={styles.button} onPress={() => Alert.alert('Button Pressed')}>
+        <Text style={styles.text}>3</Text>
+        </Pressable>
+      <Separator/>
+      <Pressable style={styles.button} onPress={() => Alert.alert('Button Pressed')}>
+        <Text style={styles.text}>4</Text>
+        </Pressable>
+      <Separator/>
+        
 
       <Text style={styles.title}>Did the fault produce any sound?</Text> 
-      <Button
-        title="Yes"
-        onPress={() => Alert.alert('Button Pressed')}
-      />
-      <Button
-        title="No"
-        onPress={() => Alert.alert('Button Pressed')}
-      />
+      <View style={styles.parent}>
+          <CButton text={"Yes"} />
+          <CButton text={"No"} />
+        </View>
       </View>
+      </ScrollView>
   );
 }
+
+/*<Pressable style={styles.button2} onPress={() => Alert.alert('Button Pressed')}>
+<Text style={styles.text}>Yes</Text>
+</Pressable>
+<Separator/>
+<Pressable style={styles.button2} onPress={() => Alert.alert('Button Pressed')}>
+<Text style={styles.text}>No</Text>
+</Pressable>*/
 
 const styles = StyleSheet.create({
   container: {
@@ -81,10 +91,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    width: "20%",
+    height: "30%",
   },
   box:{
-    width: '80%',
+    width: '100%',
     height: '20%',
     padding: 5,
   },
@@ -95,7 +106,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 25,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#000',
     alignItems: 'center',
@@ -108,5 +119,14 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: '#17A99A',
+  },
+  parent: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    fontSize: 20,
+    height: 40,
+    width: 20,
+
   },
 });

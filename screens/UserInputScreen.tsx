@@ -10,29 +10,31 @@ const Separator = () => (
   <View style={styles.separator} />
 );
   
-
-export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home'>) {
+export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home'>): JSX.Element {
   return (
     <View style={styles.container}>
     <Text style={styles.title}>Enter Fault Details</Text>   
+    
     <Separator/>
-
     <Text style={styles.title}>Car Type - Make</Text> 
 
+    <Separator/>
     <Text style={styles.title}>Colour of Fault</Text> 
-
+    
+    <Separator/>
     <Text style={styles.title}>Describe Fault</Text> 
 
+    <Separator/>
     <Text style={styles.title}>Time Detected</Text>  
      
+    <Separator/>
     <Text style={styles.title}>Location</Text>  
 
     <Separator/>
 
-    <Button
-        title="Suggest Fault"
-        onPress={() => Alert.alert('Button Pressed')}
-      />
+    <Pressable style={styles.button} onPress={() => navigation.navigate('MostCommonFaults')}>
+        <Text style={styles.text}>Suggest Fault</Text>
+        </Pressable>   
 
   </View>
   );
@@ -74,5 +76,19 @@ const styles = StyleSheet.create({
       margin: 12,
       borderWidth: 1,
       padding: 10,
+    },
+    text: {
+      fontSize: 25,
+      fontWeight: 'bold',
+      color: '#000',
+      alignItems: 'center',
+    },
+    button: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#17A99A',
+      flexDirection: 'row',
+      width: '40%',
+      height: 60,
     },
   });
