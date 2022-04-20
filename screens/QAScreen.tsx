@@ -14,27 +14,38 @@ const Separator = () => (
 
 export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
-    <ScrollView>
     <View style={styles.container}>
         <Text style={styles.title}>Detect Fault Q&A</Text>   
 
-        <Text style={styles.title}>What Colour if the Fault</Text>   
-        <Pressable style={styles.button} onPress={() => navigation.navigate('RedFault')}>
+        <Text style={styles.title}>What Colour if the Fault?</Text>  
+        <Separator/>
+
+        {/* Red Button */} 
+        <Pressable style={styles.buttonR} onPress={() => navigation.navigate('RedFault')}>
         <Text style={styles.text}>Red</Text>
         </Pressable>
-
         <Separator/>
 
-        <Pressable style={styles.button} onPress={() => navigation.navigate('AmberFault')}>
+        {/* Amber Button */} 
+        <Pressable style={styles.buttonA} onPress={() => navigation.navigate('AmberFault')}>
         <Text style={styles.text}>Amber</Text>
         </Pressable>
-
         <Separator/>
-        <Pressable style={styles.button} onPress={() => navigation.navigate('GreenFault')}>
-        <Text style={styles.text}>Green / Blue</Text>
-        </Pressable>
 
-        <Text style={styles.title}>How Many Times did it appear</Text> 
+        {/* Green Button */} 
+        <Pressable style={styles.buttonG} onPress={() => navigation.navigate('GreenFault')}>
+        <Text style={styles.text}>Green</Text>
+        </Pressable>
+        <Separator/>
+
+        {/* Blue Button */} 
+        <Pressable style={styles.buttonB} onPress={() => navigation.navigate('GreenFault')}>
+        <Text style={styles.text}>Blue</Text>
+        </Pressable>
+        <Separator/>
+
+      {/* Unused as UI Redesigned */}
+        {/* <Text style={styles.title}>How Many Times did it appear</Text> 
         <Pressable style={styles.button} onPress={() => Alert.alert('Button Pressed')}>
         <Text style={styles.text}>1</Text>
         </Pressable>
@@ -59,9 +70,8 @@ export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
       <View style={styles.parent}>
           <CButton text={"Yes"} />
           <CButton text={"No"} />
-        </View>
+        </View> */}
       </View>
-      </ScrollView>
   );
 }
 
@@ -111,7 +121,16 @@ const styles = StyleSheet.create({
     color: '#000',
     alignItems: 'center',
   },
+  parent: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    fontSize: 20,
+    height: 40,
+    width: 20,
+  },
   button: {
+    width: '60%',
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 12,
@@ -120,13 +139,44 @@ const styles = StyleSheet.create({
     elevation: 3,
     backgroundColor: '#17A99A',
   },
-  parent: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-around",
-    fontSize: 20,
-    height: 40,
-    width: 20,
-
+  buttonR: {
+    width: '60%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#17A99A',
+  },
+  buttonA: {
+    width: '60%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#17A99A',
+  },
+  buttonG: {
+    width: '60%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#17A99A',
+  },
+  buttonB: {
+    width: '60%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#17A99A',
   },
 });

@@ -1,7 +1,7 @@
 // Roadside Assistance Page
 import { getFocusedRouteNameFromRoute, NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
-import { StyleSheet, Button, Alert, Image, TouchableOpacity, Pressable, Platform, Linking} from 'react-native';
+import { StyleSheet, Button, Alert, Image, TouchableOpacity, Pressable, Platform, Linking, ScrollView} from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
@@ -9,25 +9,28 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
-/*makeCall = () => {
-
-  let phoneNumber = '';
-
-  if (Platform.OS === 'android') {
-    phoneNumber = 'tel:${1234567890}';
-  } else {
-    phoneNumber = 'telprompt:${1234567890}';
-  }
-
-  Linking.openURL(phoneNumber);
-};*/
-
 export default function ServiceScreen({ navigation }: RootTabScreenProps<'Service'>) {
+
+  {/* Make A Phone Call */}
+  const makeCall = () => {
+
+    let phoneNumber = '1234567890';
+
+    if (Platform.OS === 'android') {
+      phoneNumber = 'tel:${}';
+    } else {
+      phoneNumber = 'telprompt:${}';
+    }
+
+    Linking.openURL(phoneNumber);
+  };
+
   return (
     <View style={styles.container}>
   
       <Text style={styles.title}>Roadside Assistance Numbers</Text>
       <Separator />
+
       <Text style={styles.title}>AA Roadside Assistance</Text>
       <Pressable style={styles.button}>
       <Text style={styles.text}>0818 66 77 88</Text>
@@ -57,6 +60,11 @@ export default function ServiceScreen({ navigation }: RootTabScreenProps<'Servic
       <Text style={styles.text}>01 429 8483</Text>
       </Pressable>
       <Separator />
+
+      <Text style={styles.title}>Ring Any Number</Text>
+      <Pressable onPress={makeCall} style={styles.touchableButton} >
+          <Text style={styles.TextStyle}> Click Here To Dial</Text>
+        </Pressable>
     </View>
   );
 }
@@ -70,7 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#000',
     //color: '#17A99A',
@@ -103,5 +111,19 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: '#17A99A',
+  },
+  touchableButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#17A99A',
+  },
+  TextStyle: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
   },
 });
