@@ -10,52 +10,66 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
-
-
-const Item = ({ title }) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
-
-const numColumns = 3
+// const dataList = [{id: '1', title: 'Batter Fault', src: '../assets/images/RedFaults/Battery.jpg'}, 
+// {id: '2', title: 'Brake System Fault', src: '../assets/images/RedFaults/brake_system_warning_light.jpg'}, 
+// {id: '3', title: 'Door & Bonnet Fault', src: '../assets/images/RedFaults/door_bonnet_warning_light.jpg'}]
+// const numColumns = 3
 
 //const RedImage = require("../assets/images/RedFaults/BrakeSystemWarningLight.jpg"); <Image source={RedImage}></Image>
 
 export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProps<'Home'>) {
-
-const dataList = [{id: '1', title: 'Batter Fault', src: '../assets/images/RedFaults/Battery.jpg'}, 
-{id: '2', title: 'Brake System Fault', src: '../assets/images/RedFaults/brake_system_warning_light.jpg'}, 
-{id: '3', title: 'Door & Bonnet Fault', src: '../assets/images/RedFaults/door_bonnet_warning_light.jpg'}]
-
-
   return (
     <ScrollView>
     <View style={styles.separator}>
       {/* <Text style={styles.title}>Most Common Faults</Text> */}
-      <Text onPress={() => navigation.navigate('RedFault')} style={styles.title}>Red Faults</Text>    
+      <Text onPress={() => navigation.navigate('RedFault')} style={styles.title}>Red Faults</Text>
+      <Image source={require('../assets/images/RedFaults/engine_warning_light.jpg')} 
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />     
       <Image source={require('../assets/images/RedFaults/Battery.jpg')} 
-      style = {{height: 200, width: 250, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/RedFaults/brake_system_warning_light.jpg')} 
-      style = {{height: 200, width: 250, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/RedFaults/door_bonnet_warning_light.jpg')} 
-      style = {{height: 200, width: 250, resizeMode : 'stretch',}} /> 
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      {/* <Image source={require('../assets/images/RedFaults/.jpg')} 
+      style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/RedFaults/.jpg')} 
+      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> 
+      <Image source={require('../assets/images/RedFaults/.jfif')} 
+      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> 
+      <Image source={require('../assets/images/RedFaults/.jfif')} 
+      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> */}
       
       <Separator />
 
       <Text onPress={() => navigation.navigate('AmberFault')} style={styles.title}>Amber Faults</Text>
       <View style={styles.box}>
-        <Image source={require('../assets/images/AmberFaults/ABS.jpg')}/>
-        <Image source={require('../assets/images/AmberFaults/traction-control.png')}/>
+        <Image source={require('../assets/images/AmberFaults/ABS.jpg')}
+        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/AmberFaults/LowFuelWarningLight.jpg')}
+        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/AmberFaults/TractionControlWarningLight.jpg')}
+        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/AmberFaults/TyrePressureSensorWarning.jpg')}
+        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+        {/* <Image source={require('../assets/images/AmberFaults/.jfif')}
+        style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/AmberFaults/.jfif')}
+        style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> */}
         </View>
 
       <Separator />
 
       <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green and Blue Faults</Text>
       <View style={styles.box}>
-      <Image source={require('../assets/images/GreenFaults/AutomaticHeadlightsSymbol.gif')}/>
-      <Image source={require('../assets/images/GreenFaults/HighBeamIndicators.gif')}/>
-      <Image source={require('../assets/images/GreenFaults/LowBeamIndicators.gif')}/>
+      <Image source={require('../assets/images/GreenFaults/AutomaticHeadlightsSymbol.gif')}
+       style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/GreenFaults/HighBeamIndicators.gif')}
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/GreenFaults/LowBeamIndicators.gif')}
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      {/* <Image source={require('../assets/images/GreenFaults/.jfif')}
+      style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/GreenFaults/.jfif')}
+      style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/GreenFaults/.jfif')}
+      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> */}
         </View>
       <Separator />
     </View>
@@ -64,16 +78,16 @@ const dataList = [{id: '1', title: 'Batter Fault', src: '../assets/images/RedFau
 }
 
 const styles = StyleSheet.create({
-//  container: {
-//    width: '100%',
-//    padding: 5,
-//    flex: 1,
-//   alignItems: 'center',
-//    justifyContent: 'center',
-//   borderTopColor: '#737373',
-//    flexDirection: 'row',
-//   flexWrap: 'wrap',
-//  },
+  container: {
+    width: '100%',
+    padding: 5,
+   flex: 1,
+   alignItems: 'center',
+ justifyContent: 'center',
+borderTopColor: '#737373',
+flexDirection: 'row',
+flexWrap: 'wrap',
+},
  title: {
   fontSize: 30,
   fontWeight: 'bold',
@@ -97,7 +111,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#17A99A',
   },
   box:{
-    width: '80%',
     padding: 8,
   },
   inner:{
@@ -110,25 +123,12 @@ image: {
  flex: 1,
 justifyContent: "center",
 },
-//  item: {
-//  backgroundColor: '#f9c2ff',
-//  height: 150,
-//  justifyContent: 'center',
-//  marginVertical: 8,
-//  marginHorizontal: 16,
-//  padding: 20,
-// },
-container: {
-  flex: 1,
-  backgroundColor: '#fff',
-  paddingTop: 40,
-  paddingHorizontal: 20
+  item: {
+  backgroundColor: '#f9c2ff',
+  height: 150,
+  justifyContent: 'center',
+  marginVertical: 8,
+  marginHorizontal: 16,
+  padding: 20,
  },
- item: {
-  marginTop: 20,
-  padding: 30,
-  backgroundColor: '#ffc600',
-  fontSize: 24
- }
-
 });

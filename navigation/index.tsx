@@ -92,7 +92,7 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'Home'>) => ({
           title: 'Dash Warning',
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Nav')} //Renders NavBar
@@ -114,7 +114,7 @@ function BottomTabNavigator() {
         component={ServiceScreen}
         options={{
           title: 'Roadside Assistance',
-          tabBarIcon: ({ color }) => <TabBarIcon name="phone" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
         }}
       />
       <BottomTab.Screen
@@ -122,7 +122,7 @@ function BottomTabNavigator() {
         component={MostCommonFaultsScreen}
         options={{
           title: 'Most Common Faults',
-          tabBarIcon: ({ color }) => <TabBarIcon name="warning" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
         }}
       />
     </BottomTab.Navigator>
