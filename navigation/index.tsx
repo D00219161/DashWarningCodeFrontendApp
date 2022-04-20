@@ -13,7 +13,6 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 //Pages Used 
 import HomeScreen from '../screens/HomeScreen';
 import SigninScreen from '../screens/SigninScreen';
-import CreateAccountScreen from '../screens/CreateAccountScreen';
 import ServiceScreen from '../screens/ServiceScreen';
 import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
 import RedFaultScreen from '../screens/RedFaultScreen';
@@ -23,6 +22,7 @@ import UserInputScreen from '../screens/UserInputScreen';
 import QAScreen from '../screens/QAScreen';
 
 //Pages Not Used
+import CreateAccountScreen from '../screens/CreateAccountScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
 import ScanScreen from '../screens/ScanScreen';
 import ScanningScreen from '../screens/ScanningScreen';
@@ -53,7 +53,6 @@ function RootNavigator() {
       <Stack.Group>
         <Stack.Screen name="Nav" component={NavBarScreen} />
         <Stack.Screen name="Signin" component={SigninScreen} />
-        <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
         <Stack.Screen name="Service" component={ServiceScreen} />
         <Stack.Screen name="MostCommonFaults" component={MostCommonFaultsScreen} />
         <Stack.Screen name="RedFault" component={RedFaultScreen} />
@@ -93,16 +92,16 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'Home'>) => ({
           title: 'Dash Warning',
-          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Nav')} //Renders User Account Screen - Could render NavBar
+              onPress={() => navigation.navigate('Nav')} //Renders NavBar
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
                 <MaterialIcons 
                 name="menu"
-                size={25}
+                size={40}
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
                 />
@@ -115,7 +114,7 @@ function BottomTabNavigator() {
         component={ServiceScreen}
         options={{
           title: 'Roadside Assistance',
-          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="phone" color={color} />,
         }}
       />
       <BottomTab.Screen
@@ -123,7 +122,7 @@ function BottomTabNavigator() {
         component={MostCommonFaultsScreen}
         options={{
           title: 'Most Common Faults',
-          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="warning" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -135,7 +134,7 @@ function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }) {
-  return <FontAwesome size={50} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={30} style={{ marginBottom: 5 }} {...props} />;
 }
 
 

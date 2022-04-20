@@ -16,7 +16,7 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
   return (
     <ScrollView>
     <View style={styles.separator}>
-      <Text style={styles.title}>Most Common Faults</Text>
+      {/* <Text style={styles.title}>Most Common Faults</Text> */}
       <Text onPress={() => navigation.navigate('RedFault')} style={styles.title}>Red Faults</Text>
       <Image source={require('../assets/images/RedFaults/Battery.jpg')}/>
       <Image source={require('../assets/images/RedFaults/brake_system_warning_light.jpg')}/>

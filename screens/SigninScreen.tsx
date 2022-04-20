@@ -1,22 +1,46 @@
 import * as React from 'react';
-import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable } from 'react-native';
+import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable, TextInput } from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+// import { TextInput } from 'react-native-gesture-handler';
 
 const Separator = () => (
   <View style={styles.separator} />
 );
 
 export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>) {
+
+  const [username, setUsername] = React.useState('roisin');
+  const [password, setpassword] = React.useState('password123');
+
   return (
     <View style={styles.container}>
-        <Text style={styles.title}>Login To Your Account</Text>   
+        <Text style={styles.title}>Login To Your Account</Text> 
 
-        <Text style={styles.title}>Username</Text>   
-        <Text style={styles.title}>Password</Text>   
-  
-        <Pressable style={styles.button} onPress={() => navigation.navigate('Signin')}>
+      < Separator/>
+
+        <Text style={styles.title}>Enter Username</Text>
+        <TextInput 
+        style={styles.input}
+        placeholder='e.g. John Doe'
+        onChangeText={(val) => setUsername(val)}
+        />
+        <Text> username: {username} </Text>
+
+        <Separator/>
+
+        <Text style={styles.title}>Enter Password</Text> 
+        <TextInput 
+        style={styles.input}
+        placeholder='e.g. Password123'
+        onChangeText={(val) => setpassword(val)}
+        />  
+        <Text> password: {password}</Text>
+
+        <Separator/>
+
+        <Pressable style={styles.button} onPress={() => navigation.navigate('MostCommonFaults')}>
         <Text style={styles.text}>Log On</Text>
         </Pressable>   
 
@@ -26,12 +50,10 @@ export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>)
         <Text style={styles.text}>Cancel</Text>
         </Pressable>
 
-        <Separator/>
-
-        <Text style={styles.title}>Create Account</Text>
+        {/* <Text style={styles.title}>Create Account</Text>
         <Pressable style={styles.button} onPress={() => navigation.navigate('CreateAccount')}>
         <Text style={styles.text}>Create</Text>
-        </Pressable> 
+        </Pressable>  */}
     </View>   
   );
 }
@@ -49,7 +71,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#17A99A',
   },
   title: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#000'
     //: '#17A99A',
@@ -57,7 +79,7 @@ const styles = StyleSheet.create({
   separator: {
     marginVertical: 30,
     height: 1,
-    width: '80%',
+
   },
   text: {
     fontSize: 25,
@@ -74,15 +96,24 @@ const styles = StyleSheet.create({
   button2:{
     backgroundColor: 'green',
     flexDirection: 'row',
-    width: '40%',
-    height: 40,
-  },
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#17A99A',
-    flexDirection: 'row',
-    width: '40%',
+    width: '60%',
     height: 60,
   },
+  button: {
+    width: '60%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: '#17A99A',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#777',
+    padding: 8,
+    margin: 10,
+    width: '60%',
+  }
 });

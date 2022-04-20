@@ -10,7 +10,6 @@ const Separator = () => (
 );
 
 export default function ServiceScreen({ navigation }: RootTabScreenProps<'Service'>) {
-
   {/* Make A Phone Call */}
   const makeCall = () => {
 

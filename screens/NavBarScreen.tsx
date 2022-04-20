@@ -56,14 +56,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#000',
   },
   separator: {
     marginVertical: 30,
     height: 1,
-    width: '80%',
   },
   button: {
     alignItems: 'center',

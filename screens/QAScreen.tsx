@@ -1,7 +1,7 @@
 // Roadside Assistance Page
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import * as React from 'react';
-import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable, ScrollView } from 'react-native';
+import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable, ScrollView, SwipeableListView } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -17,8 +17,7 @@ export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
     <View style={styles.container}>
         <Text style={styles.title}>Detect Fault Q&A</Text>   
 
-        <Text style={styles.title}>What Colour if the Fault?</Text>  
-        <Separator/>
+        <Text style={styles.title}>What Colour is the Fault?</Text>  
 
         {/* Red Button */} 
         <Pressable style={styles.buttonR} onPress={() => navigation.navigate('RedFault')}>
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#737373',
   },
   title: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#000',
     textAlign: 'center'
@@ -101,8 +100,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomColor: '#737373',
-    width: "20%",
-    height: "30%",
   },
   box:{
     width: '100%',
@@ -147,7 +144,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#17A99A',
+    backgroundColor: '#FF0000',
   },
   buttonA: {
     width: '60%',
@@ -157,7 +154,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#17A99A',
+    backgroundColor: '#FFBF00',
   },
   buttonG: {
     width: '60%',
@@ -167,7 +164,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#17A99A',
+    backgroundColor: '#00FF00',
   },
   buttonB: {
     width: '60%',
@@ -177,6 +174,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#17A99A',
+    backgroundColor: '#0000FF',
   },
 });

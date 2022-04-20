@@ -10,32 +10,70 @@ const Separator = () => (
   <View style={styles.separator} />
 );
   
-export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home'>): JSX.Element {
+export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home'>) {
+
+  const [cartype, setCarType] = React.useState('Toyota');
+  const [colour, setColour] = React.useState('Red');
+  const [description, setDescription] = React.useState('Fault came on 3 times');
+  const [timeDetected, setTimeDetected] = React.useState('12 pm noon');
+  const [location, setLocation] = React.useState('Dublin City');
+
   return (
     <View style={styles.container}>
     <Text style={styles.title}>Enter Fault Details</Text>   
     
     <Separator/>
-    <Text style={styles.title}>Car Type - Make</Text> 
+    <Text style={styles.title}>Enter Car Type or Make</Text> 
+    <TextInput 
+    style={styles.input}
+    placeholder='e.g. Toyota '
+    onChangeText={(val) => setCarType(val)}
+    />
+    <Text> cartype: {cartype} </Text>
 
     <Separator/>
-    <Text style={styles.title}>Colour of Fault</Text> 
+    <Text style={styles.title}>Enter Colour of Fault</Text> 
+    <TextInput 
+    style={styles.input}
+    placeholder='e.g. Red '
+    onChangeText={(val) => setColour(val)}
+    />
+    <Text> colour: {colour} </Text>
     
     <Separator/>
     <Text style={styles.title}>Describe Fault</Text> 
+    <TextInput 
+    style={styles.input}
+    placeholder='e.g. Fault is flashing '
+    onChangeText={(val) => setDescription(val)}
+    />
+    <Text> description: {description} </Text>
 
     <Separator/>
-    <Text style={styles.title}>Time Detected</Text>  
+    <Text style={styles.title}>Enter Time Detected</Text>  
+    <TextInput 
+    style={styles.input}
+    placeholder='e.g. 12 pm noon '
+    onChangeText={(val) => setTimeDetected(val)}
+    />
+    <Text> timeDetected: {timeDetected} </Text>
      
     <Separator/>
-    <Text style={styles.title}>Location</Text>  
+    <Text style={styles.title}>Enter Location</Text>
+    <TextInput 
+    style={styles.input}
+    placeholder='e.g. Dublin N4  '
+    onChangeText={(val) => setLocation(val)}
+    />
+    <Text> location: {location} </Text>  
 
     <Separator/>
 
     <Pressable style={styles.button} onPress={() => navigation.navigate('MostCommonFaults')}>
-        <Text style={styles.text}>Suggest Fault</Text>
-        </Pressable>   
+    <Text style={styles.text}>Suggest Fault</Text>
+    </Pressable>   
 
+    <Separator/>
   </View>
   );
 }
@@ -48,7 +86,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#737373',
   },
   title: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#000',
     textAlign: 'center'
@@ -71,24 +109,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
-    },
+  input: {
+    borderWidth: 1,
+    borderColor: '#777',
+    padding: 8,
+    margin: 10,
+    width: '60%',
+  },
     text: {
       fontSize: 25,
       fontWeight: 'bold',
       color: '#000',
       alignItems: 'center',
     },
-    button: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#17A99A',
-      flexDirection: 'row',
-      width: '40%',
-      height: 60,
+      button: {
+        width: '60%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 4,
+        elevation: 3,
+        backgroundColor: '#17A99A',
     },
   });
