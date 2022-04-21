@@ -53,7 +53,7 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
         <Separator/>
 
         <Text style={styles.title}>Lane Assist</Text>
-         <Image source={require('../assets/images/Green/lane_assist.jpg')}
+         <Image source={require('../assets/images/Green/lane_assist_green.jpg')}
          style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
@@ -64,7 +64,7 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
           <Separator/>
 
         <Text style={styles.title}>Press Brake Pedal</Text>
-         <Image source={require('../assets/images/Green/Automatic_Shift_lock_light.jpg')}
+         <Image source={require('../assets/images/Green/Automatic_Shift_Lock_Light.jpg')}
          style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
@@ -75,7 +75,6 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
           <Separator/>
 
-        <Text style={styles.title}>Green Faults</Text>
          <Text style={styles.title}>High or Low Beam Indicators</Text>
          <Image source={require('../assets/images/Green/LowBeamIndicators.gif')}
           style = {{height: 200, width: 250,resizeMode : 'stretch',}} />

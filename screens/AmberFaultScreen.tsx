@@ -27,7 +27,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
         <Separator />
 
         <Text style={styles.title}>Tyre Pressure Monitoring</Text>
-        <Image source={require('../assets/images/Amber/.jpg')}
+        <Image source={require('../assets/images/Amber/tyre_pressure_update.jpg')}
         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
         <View style={styles.box}>
         <Text style={styles.text}>

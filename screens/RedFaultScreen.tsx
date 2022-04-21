@@ -89,7 +89,7 @@ export default function RedFaultScreen({ navigation }: RootTabScreenProps<'Home'
         <Separator/>
 
         <Text style={styles.title}>Tyre Pressure Warning Light</Text>  
-        <Image source={require('../assets/images/Red/tyre_pressure_monitoring_warning_light.jpg')}
+        <Image source={require('../assets/images/Red/tyre_pressure_monitoring_warning_light.png')}
         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
         <View style={styles.box}>
         <Text style={styles.text}>
@@ -258,9 +258,6 @@ export default function RedFaultScreen({ navigation }: RootTabScreenProps<'Home'
           authorised mechanic to have the system examined.
           </Text>
         </View>
-
-
-
     </View>
     </ScrollView>
   );

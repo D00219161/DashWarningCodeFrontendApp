@@ -63,9 +63,9 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
       <Image source={require('../assets/images/Green/electronic_parking_brake_update.jpg')}
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/Green/lane_assist.jpg')}
+      <Image source={require('../assets/images/Green/lane_assist_green.jpg')}
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />   
-      <Image source={require('../assets/images/Green/Automatic_Shift_lock_light.jpg')}
+      <Image source={require('../assets/images/Green/Automatic_Shift_Lock_Light.jpg')}
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
       <Image source={require('../assets/images/Green/LowBeamIndicators.gif')}
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
@@ -75,9 +75,9 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
       <Text onPress={() => navigation.navigate('BlueFault')} style={styles.title}>Blue Faults</Text>
       <View style={styles.box}>
       <Image source={require('../assets/images/GreenFaults/AutomaticHeadlightsSymbol.gif')}
-       style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
       <Image source={require('../assets/images/GreenFaults/HighBeamIndicators.gif')}
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
       </View>
     </View>
     </ScrollView>
