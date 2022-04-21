@@ -38,7 +38,7 @@ export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
         <Separator/>
 
         {/* Blue Button */} 
-        <Pressable style={styles.buttonB} onPress={() => navigation.navigate('GreenFault')}>
+        <Pressable style={styles.buttonB} onPress={() => navigation.navigate('BlueFault')}>
         <Text style={styles.text}>Blue</Text>
         </Pressable>
         <Separator/>

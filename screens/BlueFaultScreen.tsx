@@ -9,13 +9,13 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
-export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Home'>) {
+export default function BlueFaultScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <ScrollView>
     <View style={styles.separator}>
-      <Text style={styles.title}>Green Faults</Text>
-         <Text style={styles.title}>High or Low Beam Indicators</Text>
-         <Image source={require('../assets/images/GreenFaults/HighBeamIndicators.gif')}
+      <Text style={styles.title}>Blue Faults</Text>
+      <Text style={styles.title}>High or Low Beam Indicators</Text>
+         <Image source={require('../assets/images/Blue/HighBeamIndicators.gif')}
           style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
@@ -31,7 +31,7 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
         
   
          <Text style={styles.title}>Automatic Headlight Dimmers</Text>
-         <Image source={require('../assets/images/GreenFaults/AutomaticHeadlightsSymbol.gif')}
+         <Image source={require('../assets/images/Blue/AutomaticHeadlightsSymbol.gif')}
           style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
@@ -42,7 +42,7 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
          These are not faults but it is good to check regularly for blown blues in your headlamps. 
          </Text>
           </View>
-          </View>
+        </View>
     </ScrollView>
   );
 }

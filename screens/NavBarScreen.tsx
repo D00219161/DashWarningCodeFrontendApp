@@ -18,7 +18,8 @@ export default function NavBarScreen({ navigation }: RootTabScreenProps<'Home'>)
       <Text onPress={() => navigation.navigate('MostCommonFaults')} style={styles.title}>Most Common Faults</Text>
       <Text onPress={() => navigation.navigate('RedFault')} style={styles.title}>Red Faults</Text>
       <Text onPress={() => navigation.navigate('AmberFault')} style={styles.title}>Amber Faults</Text>
-      <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green and Blue Faults</Text>
+      <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green Faults</Text>
+      <Text onPress={() => navigation.navigate('BlueFault')} style={styles.title}>Blue Faults</Text>
       <Separator /> 
 
       <Text onPress={() => navigation.navigate('Service')} style={styles.title}>Roadside Assistance</Text>

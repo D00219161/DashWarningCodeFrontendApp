@@ -2,7 +2,6 @@
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import * as React from 'react';
 import { StyleSheet, Button, Alert, Image, Pressable, ImageBackground, ScrollView, FlatList, StatusBar,SafeAreaView} from 'react-native';
-import { max } from 'react-native-reanimated';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
@@ -27,15 +26,15 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
       style = {{height: 175, width: 200, resizeMode : 'stretch',}} />     
       <Image source={require('../assets/images/RedFaults/Battery.jpg')} 
       style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      {/* <Image source={require('../assets/images/RedFaults/.jpg')} 
-      style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/RedFaults/.jpg')} 
-      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> 
-      <Image source={require('../assets/images/RedFaults/.jfif')} 
-      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> 
-      <Image source={require('../assets/images/RedFaults/.jfif')} 
-      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> */}
-      
+      <Image source={require('../assets/images/RedFaults/airbag_fault_warning_light.jpg')} 
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />     
+      <Image source={require('../assets/images/RedFaults/coolant_temperature_warning_light.jpg')} 
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/RedFaults/brake_system_warning_light.jpg')} 
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/RedFaults/door_bonnet_warning_light.jpg')} 
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+
       <Separator />
 
       <Text onPress={() => navigation.navigate('AmberFault')} style={styles.title}>Amber Faults</Text>
@@ -48,49 +47,53 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
         style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
         <Image source={require('../assets/images/AmberFaults/TyrePressureSensorWarning.jpg')}
         style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-        {/* <Image source={require('../assets/images/AmberFaults/.jfif')}
+        {/* <Image source={require('..assets/images/AmberFaults/engine_oil_level.jfif')}
         style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
-        <Image source={require('../assets/images/AmberFaults/.jfif')}
+        <Image source={require('../assets/images/AmberFaults/low_fuel.jfif')}
         style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> */}
         </View>
 
       <Separator />
 
-      <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green and Blue Faults</Text>
+      <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green Faults</Text>
+      <View style={styles.box}>
+      <Image source={require('../assets/images/GreenFaults/LowBeamIndicators.gif')}
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/GreenFaults/electronic_parking_brake.jpg')}
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/GreenFaults/adaptive_cruise_control.jpg')}
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/GreenFaults/lane_assist_green.jpg')}
+      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+        </View>
+
+      <Separator />
+      <Text onPress={() => navigation.navigate('BlueFault')} style={styles.title}>Blue Faults</Text>
       <View style={styles.box}>
       <Image source={require('../assets/images/GreenFaults/AutomaticHeadlightsSymbol.gif')}
        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
       <Image source={require('../assets/images/GreenFaults/HighBeamIndicators.gif')}
       style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/GreenFaults/LowBeamIndicators.gif')}
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      {/* <Image source={require('../assets/images/GreenFaults/.jfif')}
-      style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/GreenFaults/.jfif')}
-      style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/GreenFaults/.jfif')}
-      style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> */}
-        </View>
-      <Separator />
+      </View>
     </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    padding: 5,
-   flex: 1,
-   alignItems: 'center',
- justifyContent: 'center',
-borderTopColor: '#737373',
-flexDirection: 'row',
-flexWrap: 'wrap',
+container: {
+  width: '100%',
+  padding: 5,
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderTopColor: '#737373',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
 },
- title: {
-  fontSize: 30,
-  fontWeight: 'bold',
+title: {
+   fontSize: 30,
+   fontWeight: 'bold',
    color: '#000',
    textAlign: 'center'
  },

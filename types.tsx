@@ -26,6 +26,7 @@ export type RootStackParamList = {
   RedFault: undefined;
   AmberFault: undefined;
   GreenFault: undefined;
+  BlueFault: undefined;
   Forum: undefined;
   UserInput: undefined;
   QA: undefined;
@@ -51,6 +52,7 @@ export type RootTabParamList = {
   RedFault: undefined;
   AmberFault: undefined;
   GreenFault: undefined;
+  BlueFault: undefined;
   Forum: undefined;
   UserInput: undefined;
   QA: undefined;

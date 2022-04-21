@@ -68,6 +68,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               GreenFaultScreen: 'greenfaults',
             },
           },
+          BlueFault: {
+            screens: {
+              BlueFaultScreen: 'bluefaults',
+            },
+          },
           Forum: {
             screens: {
               ForumScreen: 'forum',

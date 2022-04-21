@@ -18,6 +18,7 @@ import MostCommonFaultsScreen from '../screens/MostCommonFaultsScreen';
 import RedFaultScreen from '../screens/RedFaultScreen';
 import AmberFaultScreen from '../screens/AmberFaultScreen';
 import GreenFaultScreen from '../screens/GreenFaultScreen';
+import BlueFaultScreen from '../screens/BlueFaultScreen';
 import UserInputScreen from '../screens/UserInputScreen';
 import QAScreen from '../screens/QAScreen';
 
@@ -58,6 +59,7 @@ function RootNavigator() {
         <Stack.Screen name="RedFault" component={RedFaultScreen} />
         <Stack.Screen name="AmberFault" component={AmberFaultScreen} />
         <Stack.Screen name="GreenFault" component={GreenFaultScreen} />
+        <Stack.Screen name="BlueFault" component={BlueFaultScreen} />
         <Stack.Screen name="UserInput" component={UserInputScreen} />
         <Stack.Screen name="QA" component={QAScreen} />
       </Stack.Group>
