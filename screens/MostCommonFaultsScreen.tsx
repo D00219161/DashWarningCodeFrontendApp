@@ -22,50 +22,54 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
     <View style={styles.separator}>
       {/* <Text style={styles.title}>Most Common Faults</Text> */}
       <Text onPress={() => navigation.navigate('RedFault')} style={styles.title}>Red Faults</Text>
-      <Image source={require('../assets/images/RedFaults/engine_warning_light.jpg')} 
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />     
-      <Image source={require('../assets/images/RedFaults/Battery.jpg')} 
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/RedFaults/airbag_fault_warning_light.jpg')} 
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />     
-      <Image source={require('../assets/images/RedFaults/coolant_temperature_warning_light.jpg')} 
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/RedFaults/brake_system_warning_light.jpg')} 
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/RedFaults/door_bonnet_warning_light.jpg')} 
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/Red/abs_warning_light.jpg')} 
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />     
+      <Image source={require('../assets/images/Red/Battery.jpg')} 
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} /> 
+      <Image source={require('../assets/images/Red/brake_system_warning_light.jpg')} 
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} /> 
+      <Image source={require('../assets/images/Red/coolant_temperature_warning_light.jpg')} 
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} /> 
+      <Image source={require('../assets/images/Red/engine_warning_light.jpg')} 
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} /> 
+      <Image source={require('../assets/images/Red/tyre_pressure_monitoring_warning_light.png')} 
+      style = {{height: 200, width: 250, resizeMode : 'stretch',}} />   
 
       <Separator />
 
       <Text onPress={() => navigation.navigate('AmberFault')} style={styles.title}>Amber Faults</Text>
       <View style={styles.box}>
-        <Image source={require('../assets/images/AmberFaults/ABS.jpg')}
-        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-        <Image source={require('../assets/images/AmberFaults/LowFuelWarningLight.jpg')}
-        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-        <Image source={require('../assets/images/AmberFaults/TractionControlWarningLight.jpg')}
-        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-        <Image source={require('../assets/images/AmberFaults/TyrePressureSensorWarning.jpg')}
-        style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-        {/* <Image source={require('..assets/images/AmberFaults/engine_oil_level.jfif')}
-        style = {{height: 250, width: 250, resizeMode : 'stretch',}} />
-        <Image source={require('../assets/images/AmberFaults/low_fuel.jfif')}
-        style = {{height: 250, width: 250, resizeMode : 'stretch',}} /> */}
+        <Image source={require('../assets/images/Amber/abs_update.jpg')}
+        style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/Amber/engine_oil_level_update.jpg')}
+        style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/Amber/brake_lights_update.jpg')}
+        style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/Amber/diesel_engine_management_update.jpg')}
+        style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/Amber/tyre_pressure_update.jpg')}
+        style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+        <Image source={require('../assets/images/Amber/low_fuel_update.jpg')}
+        style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
         </View>
 
       <Separator />
 
       <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green Faults</Text>
       <View style={styles.box}>
-      <Image source={require('../assets/images/GreenFaults/LowBeamIndicators.gif')}
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/GreenFaults/electronic_parking_brake.jpg')}
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/GreenFaults/adaptive_cruise_control.jpg')}
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/GreenFaults/lane_assist_green.jpg')}
-      style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
-        </View>
+      <Image source={require('../assets/images/Green/adaptive_cruise_control_update.jpg')}
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/Green/cruise_control_update.jpg')}
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/Green/electronic_parking_brake_update.jpg')}
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/Green/lane_assist.jpg')}
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />   
+      <Image source={require('../assets/images/Green/Automatic_Shift_lock_light.jpg')}
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+      <Image source={require('../assets/images/Green/LowBeamIndicators.gif')}
+      style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
+      </View>
 
       <Separator />
       <Text onPress={() => navigation.navigate('BlueFault')} style={styles.title}>Blue Faults</Text>

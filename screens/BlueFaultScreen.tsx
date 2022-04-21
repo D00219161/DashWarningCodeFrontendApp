@@ -16,7 +16,7 @@ export default function BlueFaultScreen({ navigation }: RootTabScreenProps<'Home
       <Text style={styles.title}>Blue Faults</Text>
       <Text style={styles.title}>High or Low Beam Indicators</Text>
          <Image source={require('../assets/images/Blue/HighBeamIndicators.gif')}
-          style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+          style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          The light is active only when the high beams are active (turned on) and has been a standard in vehicles for decades. 
@@ -32,7 +32,7 @@ export default function BlueFaultScreen({ navigation }: RootTabScreenProps<'Home
   
          <Text style={styles.title}>Automatic Headlight Dimmers</Text>
          <Image source={require('../assets/images/Blue/AutomaticHeadlightsSymbol.gif')}
-          style = {{height: 175, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          The system is also known as the High Beam Assistant. 
