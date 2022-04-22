@@ -28,7 +28,7 @@ export default function ServiceScreen({ navigation }: RootTabScreenProps<'Servic
     <ScrollView>
     <View style={styles.container}>
   
-      <Text style={styles.title}>Roadside Assistance Numbers</Text>
+      {/* <Text style={styles.title}>Roadside Assistance Numbers</Text> */}
     
       <Text style={styles.title}>AA Roadside Assistance</Text>
       <Pressable style={styles.button}>
@@ -89,10 +89,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   separator: {
-    marginVertical: 15,
+    marginVertical: 18,
     alignItems: 'center',
-    justifyContent: 'center',
-    justifyContent:'space-between', 
+    justifyContent:'center', 
     flex: 1,
   },
   linkText: {

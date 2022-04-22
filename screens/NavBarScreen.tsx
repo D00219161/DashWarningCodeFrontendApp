@@ -15,7 +15,7 @@ export default function NavBarScreen({ navigation }: RootTabScreenProps<'Home'>)
     
      <Separator /> 
 
-      <Text onPress={() => navigation.navigate('QA')} style={styles.title}>Detect Fault Q&A Forum</Text>
+      <Text onPress={() => navigation.navigate('DetectFault')} style={styles.title}>Detect Fault Q&A Forum</Text>
       <Separator /> 
 
       <Text onPress={() => navigation.navigate('MostCommonFaults')} style={styles.title}>Most Common Faults</Text>
@@ -67,10 +67,9 @@ const styles = StyleSheet.create({
   },
   separator: {
     flex: 1,
-    marginVertical: 40,
+    marginVertical: 45,
     alignItems: 'center',
     justifyContent: 'center',
-    justifyContent:'space-between', 
   },
   button: {
     alignItems: 'center',

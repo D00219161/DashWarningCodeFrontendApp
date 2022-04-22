@@ -28,13 +28,13 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
 
         <Separator />
 
-        <Pressable style={styles.button} onPress={() => navigation.navigate('UserInput')}>
+        <Pressable style={styles.button} onPress={() => navigation.navigate('EnterDetails')}>
         <Text style={styles.text}>Enter Details</Text>
         </Pressable> 
 
         <Separator />
 
-        <Pressable style={styles.button} onPress={() => navigation.navigate('QA')}>
+        <Pressable style={styles.button} onPress={() => navigation.navigate('DetectFault')}>
         <Text style={styles.text}>Detect Fault</Text>
         </Pressable>
         </ImageBackground>

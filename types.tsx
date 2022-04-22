@@ -30,6 +30,8 @@ export type RootStackParamList = {
   Forum: undefined;
   UserInput: undefined;
   QA: undefined;
+  DetectFault: undefined;
+  EnterDetails: undefined;
   Nav: undefined;
 };
 
@@ -56,6 +58,8 @@ export type RootTabParamList = {
   Forum: undefined;
   UserInput: undefined;
   QA: undefined;
+  DetectFault: undefined;
+  EnterDetails: undefined;
   NavBar: undefined;
 };
 

@@ -10,7 +10,7 @@ const Separator = () => (
   <View style={styles.separator} />
 );
   
-export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home'>) {
+export default function EnterDetailsScreen({ navigation }: RootTabScreenProps<'Home'>) {
 
   const [cartype, setCarType] = React.useState('Toyota');
   const [colour, setColour] = React.useState('Red');
@@ -21,7 +21,7 @@ export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home
   return (
     <ScrollView>
     <View style={styles.container}>
-    <Text style={styles.title}>Enter Fault Details</Text>   
+    {/* <Text style={styles.title}>Enter Fault Details</Text>    */}
     
     <Separator/>
     <Text style={styles.title}>Enter Car Type or Make</Text> 
@@ -94,10 +94,10 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   separator: {
+    flex: 1,
     marginVertical: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    justifyContent:'space-between', 
   },
   box:{
     width: '80%',

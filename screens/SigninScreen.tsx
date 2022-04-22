@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable, TextInput, ScrollView, StatusBar } from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -9,16 +9,25 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
+const Separator2 = () => (
+  <View style={styles.separator2} />
+);
+
+const Separator3 = () => (
+  <View style={styles.separator3} />
+);
+
 export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>) {
 
   const [username, setUsername] = React.useState('roisin');
   const [password, setpassword] = React.useState('password123');
 
   return (
+    <ScrollView style={styles.scrollView}>
     <View style={styles.container}>
         <Text style={styles.title}>Login To Your Account</Text> 
 
-      < Separator/>
+      < Separator2/>
 
         <Text style={styles.title}>Enter Username</Text>
         <TextInput 
@@ -28,7 +37,7 @@ export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>)
         />
         <Text> username: {username} </Text>
 
-        <Separator/>
+        < Separator2/>
 
         <Text style={styles.title}>Enter Password</Text> 
         <TextInput 
@@ -54,7 +63,10 @@ export default function SigninScreen({ navigation }: RootTabScreenProps<'Home'>)
         <Pressable style={styles.button} onPress={() => navigation.navigate('CreateAccount')}>
         <Text style={styles.text}>Create</Text>
         </Pressable>  */}
-    </View>   
+
+      <Separator3/>
+    </View> 
+    </ScrollView>
   );
 }
 
@@ -69,6 +81,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderTopColor: '#17A99A',
+    paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {
+    flex: 1,
   },
   title: {
     fontSize: 25,
@@ -77,8 +93,17 @@ const styles = StyleSheet.create({
     //: '#17A99A',
   },
   separator: {
-    marginVertical: 10,
-    marginBottom: 40,
+    marginVertical: 40,
+    alignItems: 'center',
+    justifyContent:'center', 
+  },
+  separator3: {
+    marginVertical: 40,
+    alignItems: 'center',
+    justifyContent:'center', 
+  },
+  separator2: {
+    marginVertical: 30,
     alignItems: 'center',
     justifyContent: 'center',
   },

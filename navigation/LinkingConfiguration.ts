@@ -88,6 +88,16 @@ const linking: LinkingOptions<RootStackParamList> = {
               QAScreen: 'QA',
             },
           },
+          DetectFault: {
+            screens: {
+              DetectFaultScreen: 'DetectFault',
+            },
+          },
+          EnterDetails: {
+            screens: {
+              EnterDetailScreen: 'EnterDetails',
+            },
+          },
           UserAccount: {
             screens: {
               UserAccountScreen: 'useraccount', //ISSUE

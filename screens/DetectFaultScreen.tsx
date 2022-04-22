@@ -12,12 +12,26 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
-export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
+const Separator2 = () => (
+  <View style={styles.separator2} />
+);
+
+const Separator3 = () => (
+  <View style={styles.separator3} />
+);
+
+
+export default function DetectFaultScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
+    <ScrollView style={styles.scrollView}>
     <View style={styles.container}>
-        <Text style={styles.title}>Detect Fault Q&A</Text>   
+        {/* <Text style={styles.title}>Detect Fault</Text>  */}
+
+        <Separator2/>
 
         <Text style={styles.title}>What Colour is the Fault?</Text>  
+
+        <Separator2/>
 
         {/* Red Button */} 
         <Pressable style={styles.buttonR} onPress={() => navigation.navigate('RedFault')}>
@@ -30,18 +44,21 @@ export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
         <Pressable style={styles.buttonA} onPress={() => navigation.navigate('AmberFault')}>
         <Text style={styles.text}>Amber</Text>
         </Pressable>
+
         <Separator/>
 
         {/* Green Button */} 
         <Pressable style={styles.buttonG} onPress={() => navigation.navigate('GreenFault')}>
         <Text style={styles.text}>Green</Text>
         </Pressable>
+
         <Separator/>
 
         {/* Blue Button */} 
         <Pressable style={styles.buttonB} onPress={() => navigation.navigate('BlueFault')}>
         <Text style={styles.text}>Blue</Text>
         </Pressable>
+
         <Separator/>
 
       {/* Unused as UI Redesigned */}
@@ -71,7 +88,9 @@ export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
           <CButton text={"Yes"} />
           <CButton text={"No"} />
         </View> */}
+        <Separator3/>
       </View>
+      </ScrollView>
   );
 }
 
@@ -90,6 +109,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderTopColor: '#737373',
   },
+  scrollView: {
+    flex: 1,
+  },
   title: {
     fontSize: 25,
     fontWeight: 'bold',
@@ -97,15 +119,22 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   separator: {
-    flex: 1,
-    marginVertical: 10,
-    marginBottom: 40,
+    marginVertical: 45,
+    alignItems: 'center',
+    justifyContent:'center', 
+  },
+  separator3: {
+    marginVertical: 20,
+    alignItems: 'center',
+    justifyContent:'center', 
+  },
+  separator2: {
+    marginVertical: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    justifyContent:'space-between', 
   },
   box:{
-    width: '100%',
+    width: '80%',
     height: '20%',
     padding: 5,
   },

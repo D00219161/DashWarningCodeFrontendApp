@@ -19,8 +19,8 @@ import RedFaultScreen from '../screens/RedFaultScreen';
 import AmberFaultScreen from '../screens/AmberFaultScreen';
 import GreenFaultScreen from '../screens/GreenFaultScreen';
 import BlueFaultScreen from '../screens/BlueFaultScreen';
-import UserInputScreen from '../screens/UserInputScreen';
-import QAScreen from '../screens/QAScreen';
+import EnterDetailScreen from '../screens/EnterDetailsScreen';
+import DetectFaultScreen from '../screens/DetectFaultScreen';
 
 //Pages Not Used
 import CreateAccountScreen from '../screens/CreateAccountScreen';
@@ -60,8 +60,8 @@ function RootNavigator() {
         <Stack.Screen name="AmberFault" component={AmberFaultScreen} />
         <Stack.Screen name="GreenFault" component={GreenFaultScreen} />
         <Stack.Screen name="BlueFault" component={BlueFaultScreen} />
-        <Stack.Screen name="UserInput" component={UserInputScreen} />
-        <Stack.Screen name="QA" component={QAScreen} />
+        <Stack.Screen name="EnterDetails" component={EnterDetailScreen} />
+        <Stack.Screen name="DetectFault" component={DetectFaultScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -94,7 +94,7 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'Home'>) => ({
           title: 'Dash Warning',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="home" />,
+          tabBarIcon: ({ color }) => <TabBarIcon color={color} name="home" />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Nav')} //Renders NavBar
@@ -115,8 +115,8 @@ function BottomTabNavigator() {
         name="Service"
         component={ServiceScreen}
         options={{
-          title: 'Roadside Assistance',
-          tabBarIcon: ({ focused }) => <TabBarIcon  focused={focused} name="car" />,
+          title: 'Roadside Assistance Numbers',
+          tabBarIcon: ({ color }) => <TabBarIcon  color={color} name="car" />,
         }}
       />
       <BottomTab.Screen
@@ -124,7 +124,7 @@ function BottomTabNavigator() {
         component={MostCommonFaultsScreen}
         options={{
           title: 'Most Common Faults',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="warning" />,
+          tabBarIcon: ({ color }) => <TabBarIcon color={color} name="warning" />,
         }}
       />
     </BottomTab.Navigator>
