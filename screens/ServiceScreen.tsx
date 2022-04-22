@@ -25,11 +25,11 @@ export default function ServiceScreen({ navigation }: RootTabScreenProps<'Servic
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
   
       <Text style={styles.title}>Roadside Assistance Numbers</Text>
-      <Separator />
-
+    
       <Text style={styles.title}>AA Roadside Assistance</Text>
       <Pressable style={styles.button}>
       <Text style={styles.text}>0818 66 77 88</Text>
@@ -42,22 +42,26 @@ export default function ServiceScreen({ navigation }: RootTabScreenProps<'Servic
       </Pressable>
 
       <Separator />
+
       <Text style={styles.title}>Fire Service Number</Text>
       <Pressable style={styles.button} >
       <Text style={styles.text}>111 or 222</Text>
       </Pressable>
 
       <Separator />
+
       <Text style={styles.title}>Ambulance Service Number</Text>
       <Pressable style={styles.button} >
       <Text style={styles.text}>111 or 222</Text>
       </Pressable>
 
       <Separator />
+
       <Text style={styles.title}>Irish Towing Service Number</Text>
       <Pressable style={styles.button}>
       <Text style={styles.text}>01 429 8483</Text>
       </Pressable>
+
       <Separator />
 
       <Text style={styles.title}>Ring Any Number</Text>
@@ -65,6 +69,7 @@ export default function ServiceScreen({ navigation }: RootTabScreenProps<'Servic
           <Text style={styles.TextStyle}> Click Here To Dial</Text>
         </Pressable>
     </View>
+    </ScrollView>
   );
 }
 
@@ -81,13 +86,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     //color: '#17A99A',
+    alignItems: 'center',
   },
   separator: {
-    flex: 1,
+    marginVertical: 15,
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    justifyContent:'space-between', 
+    flex: 1,
   },
   linkText: {
     fontSize: 14,
@@ -96,7 +102,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 25,
     fontWeight: 'bold',
-    color: '#000'
+    color: '#000',
+    alignItems: 'center',
   },
   image: {
     flex: 1,

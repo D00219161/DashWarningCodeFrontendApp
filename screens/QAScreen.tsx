@@ -23,6 +23,7 @@ export default function QAScreen({ navigation }: RootTabScreenProps<'Home'>) {
         <Pressable style={styles.buttonR} onPress={() => navigation.navigate('RedFault')}>
         <Text style={styles.text}>Red</Text>
         </Pressable>
+
         <Separator/>
 
         {/* Amber Button */} 
@@ -97,9 +98,11 @@ const styles = StyleSheet.create({
   },
   separator: {
     flex: 1,
+    marginVertical: 10,
+    marginBottom: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottomColor: '#737373',
+    justifyContent:'space-between', 
   },
   box:{
     width: '100%',

@@ -94,7 +94,7 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<'Home'>) => ({
           title: 'Dash Warning',
-          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="home" />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Nav')} //Renders NavBar
@@ -116,7 +116,7 @@ function BottomTabNavigator() {
         component={ServiceScreen}
         options={{
           title: 'Roadside Assistance',
-          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon  focused={focused} name="car" />,
         }}
       />
       <BottomTab.Screen
@@ -124,19 +124,19 @@ function BottomTabNavigator() {
         component={MostCommonFaultsScreen}
         options={{
           title: 'Most Common Faults',
-          tabBarIcon: ({ color }) => <TabBarIcon name="" color={color} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="warning" />,
         }}
       />
     </BottomTab.Navigator>
   );
 }
 
-/** Icons */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={30} style={{ marginBottom: 5 }} {...props} />;
+ /** Icons */
+  function TabBarIcon(props: {
+   name: React.ComponentProps<typeof FontAwesome>['name'];
+   color: string;
+ }) {
+ return <FontAwesome size={30} style={{ marginBottom: 5 }} {...props} />;
 }
 
 

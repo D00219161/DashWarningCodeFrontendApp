@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, Pressable, StyleSheet } from 'react-native';
+import { Platform, Pressable, StyleSheet, ScrollView } from 'react-native';
 import * as React from 'react';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -10,8 +10,11 @@ const Separator = () => (
 
 export default function NavBarScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
+    <ScrollView>
     <View style={styles.container}>
     
+     <Separator /> 
+
       <Text onPress={() => navigation.navigate('QA')} style={styles.title}>Detect Fault Q&A Forum</Text>
       <Separator /> 
 
@@ -37,6 +40,7 @@ export default function NavBarScreen({ navigation }: RootTabScreenProps<'Home'>)
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
+    </ScrollView>
   );
 }
 
@@ -62,8 +66,11 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   separator: {
-    marginVertical: 30,
-    height: 1,
+    flex: 1,
+    marginVertical: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    justifyContent:'space-between', 
   },
   button: {
     alignItems: 'center',

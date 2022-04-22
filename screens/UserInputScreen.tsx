@@ -1,7 +1,7 @@
 // Roadside Assistance Page
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import * as React from 'react';
-import { StyleSheet, Button, Alert, Image, SafeAreaView, TextInput, Pressable} from 'react-native';
+import { StyleSheet, Button, Alert, Image, SafeAreaView, TextInput, Pressable, ScrollView} from 'react-native';
 import { onChange } from 'react-native-reanimated';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -19,6 +19,7 @@ export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home
   const [location, setLocation] = React.useState('Dublin City');
 
   return (
+    <ScrollView>
     <View style={styles.container}>
     <Text style={styles.title}>Enter Fault Details</Text>   
     
@@ -75,6 +76,7 @@ export default function UserInputScreen({ navigation }: RootTabScreenProps<'Home
 
     <Separator/>
   </View>
+  </ScrollView>
   );
 }
 
@@ -92,11 +94,10 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   separator: {
-    flex: 1,
+    marginVertical: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    justifyContent:'space-between', 
   },
   box:{
     width: '80%',

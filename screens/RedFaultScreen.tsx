@@ -13,7 +13,7 @@ export default function RedFaultScreen({ navigation }: RootTabScreenProps<'Home'
   return (
     <ScrollView>
     <View style={styles.separator}>
-      <Text style={styles.title}>Red Faults - Serious</Text>
+      <Text style={styles.title}>Serious Faults</Text>
         <Text style={styles.title}>Brake System Warning Light</Text>
         <Image source={require('../assets/images/RedFaults/brake_system_warning_light.jpg')}
          style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
@@ -287,8 +287,10 @@ const styles = StyleSheet.create({
     borderBottomColor: '#737373',
   },
   box:{
-    width: '80%',
+    width: '90%',
     padding: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   inner:{
     flex: 1,
@@ -297,8 +299,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 25,
+    fontSize: 20,
     color: '#000',
-    textAlign: 'center'
+    textAlign: 'center',
+    justifyContent: 'center'
   },
 });

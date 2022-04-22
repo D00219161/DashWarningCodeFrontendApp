@@ -13,19 +13,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
   return (
     <ScrollView>
     <View style={styles.separator}>
-      <Text style={styles.title}>Amber Faults</Text>
-         <Text style={styles.title}>Adaptive Light System</Text>
-         <Image source={require('../assets/images/Amber/adaptive_light_system_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
-         <View style={styles.box}>
-         <Text style={styles.text}>
-         The headlights will not dip automatically. The dipped headlights will still operate manually. 
-         Safe to Drive: Yes. They will only work manually so it is best to get them checked out by a mechanic. 
-        </Text>
-        </View>
-
-        <Separator />
-
+      <Text style={styles.title}>Warning Faults</Text>
         <Text style={styles.title}>Tyre Pressure Monitoring</Text>
         <Image source={require('../assets/images/Amber/tyre_pressure_update.jpg')}
         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
@@ -276,6 +264,18 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
         (refer to the owner’s manual).
         </Text>
         </View>
+
+        <Separator />
+
+        <Text style={styles.title}>Adaptive Light System</Text>
+         <Image source={require('../assets/images/Amber/adaptive_light_system_update.jpg')}
+         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         <View style={styles.box}>
+         <Text style={styles.text}>
+         The headlights will not dip automatically. The dipped headlights will still operate manually. 
+         Safe to Drive: Yes. They will only work manually so it is best to get them checked out by a mechanic. 
+        </Text>
+        </View>       
         </View>
     </ScrollView>
   );
@@ -295,15 +295,16 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   separator: {
-    flex: 1,
+    flex: 1, 
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
   },
   box:{
-    width: '80%',
+    width: '90%',
     padding: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   inner:{
     flex: 1,
@@ -312,8 +313,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 25,
+    fontSize: 20,
     color: '#000',
-    textAlign: 'center'
+    textAlign: 'center',
+    justifyContent: 'center'
   },
 });

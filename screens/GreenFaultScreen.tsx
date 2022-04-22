@@ -13,6 +13,7 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
   return (
     <ScrollView>
     <View style={styles.separator}>
+         <Text style={styles.title}>Indicator Faults</Text>
          <Text style={styles.title}>Adaptive Cruise Control</Text>
          <Image source={require('../assets/images/Green/adaptive_cruise_control_update.jpg')}
          style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
@@ -106,15 +107,16 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   separator: {
-    flex: 1,
+    flex: 1, 
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
   },
   box:{
-    width: '80%',
+    width: '90%',
     padding: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   inner:{
     flex: 1,
@@ -123,8 +125,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 25,
+    fontSize: 20,
     color: '#000',
-    textAlign: 'center'
+    textAlign: 'center',
+    justifyContent: 'center'
   },
 });

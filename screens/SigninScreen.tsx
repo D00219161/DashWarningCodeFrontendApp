@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable, TextInput } from 'react-native';
+import { StyleSheet, ImageBackground, Image, TouchableOpacity, Button, Alert, Pressable, TextInput, ScrollView } from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -77,9 +77,10 @@ const styles = StyleSheet.create({
     //: '#17A99A',
   },
   separator: {
-    marginVertical: 30,
-    height: 1,
-
+    marginVertical: 10,
+    marginBottom: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 25,
