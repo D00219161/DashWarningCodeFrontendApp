@@ -8,28 +8,35 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
+const Separator2 = () => (
+  <View style={styles.separator2} />
+);
+
+const Separator3 = () => (
+  <View style={styles.separator3} />
+);
 export default function NavBarScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <ScrollView>
     <View style={styles.container}>
     
-     <Separator /> 
+     <Separator3 /> 
 
-      <Text onPress={() => navigation.navigate('DetectFault')} style={styles.title}>Detect Fault Q&A Forum</Text>
-      <Separator /> 
+      <Text onPress={() => navigation.navigate('DetectFault')} style={styles.title}>Detect Fault</Text>
+      <Separator2 /> 
 
       <Text onPress={() => navigation.navigate('MostCommonFaults')} style={styles.title}>Most Common Faults</Text>
       <Text onPress={() => navigation.navigate('RedFault')} style={styles.title}>Red Faults</Text>
       <Text onPress={() => navigation.navigate('AmberFault')} style={styles.title}>Amber Faults</Text>
       <Text onPress={() => navigation.navigate('GreenFault')} style={styles.title}>Green Faults</Text>
       <Text onPress={() => navigation.navigate('BlueFault')} style={styles.title}>Blue Faults</Text>
-      <Separator /> 
+      <Separator2 /> 
 
       <Text onPress={() => navigation.navigate('Service')} style={styles.title}>Roadside Assistance</Text>
-      <Separator /> 
+      <Separator2 /> 
 
-      <Text onPress={() => navigation.navigate('UserInput')} style={styles.title}>Enter Details</Text>
-      <Separator /> 
+      <Text onPress={() => navigation.navigate('EnterDetails')} style={styles.title}>Enter Details</Text>
+      <Separator2 /> 
 
       <Pressable style={styles.button} onPress={() => navigation.navigate('Home')}>
       <Text style={styles.text}>Logout</Text>
@@ -38,7 +45,7 @@ export default function NavBarScreen({ navigation }: RootTabScreenProps<'Home'>)
       <View style={styles.separator}/>
 
       {/* Use a light status bar on iOS to account for the black space above the modal */}
-      <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
+      <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} /> 
     </View>
     </ScrollView>
   );
@@ -66,8 +73,17 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   separator: {
-    flex: 1,
-    marginVertical: 45,
+    marginVertical: 40,
+    alignItems: 'center',
+    justifyContent:'center', 
+  },
+  separator3: {
+    marginVertical: 20,
+    alignItems: 'center',
+    justifyContent:'center', 
+  },
+  separator2: {
+    marginVertical: 40,
     alignItems: 'center',
     justifyContent: 'center',
   },

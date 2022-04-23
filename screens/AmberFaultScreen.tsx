@@ -16,7 +16,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
       <Text style={styles.title}>Warning Faults</Text>
         <Text style={styles.title}>Tyre Pressure Monitoring</Text>
         <Image source={require('../assets/images/Amber/tyre_pressure_update.jpg')}
-        style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
         <View style={styles.box}>
         <Text style={styles.text}>
         1. Check and if necessary, adjust the tyre pressure on all wheels. Store the tyre pressures using the menu 
@@ -33,7 +33,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Airbag & Seat Belt System</Text>
          <Image source={require('../assets/images/Amber/airbag_and_seatbelt_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          If this lamp lights up or flashes, there is a fault in the airbag or seatbelt system. Drive carefully to an 
@@ -46,7 +46,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Anti-lock Brake System</Text>
          <Image source={require('../assets/images/Amber/abs_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          There is an Anti-lock brake system fault. The vehicle can still be braked in the normal way, but the ABS and 
@@ -58,7 +58,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Automatic Gearbox</Text>
          <Image source={require('../assets/images/Amber/automatic_gearbox_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          There is a Gearbox malfunction. If this light appears it may be accompanied with a message in the driver 
@@ -75,7 +75,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Diesel Particulate Filter</Text>
          <Image source={require('../assets/images/Amber/diesel_particulate_filter_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          1) How many warning lights are on? One: Go to step 2.
@@ -90,7 +90,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Electronic Stability Programme</Text>
          <Image source={require('../assets/images/Amber/eletronic_stability_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          1. Is the ESP light on constantly or does it flash on sometimes while driving? Flash sometimes: If the ESP light 
@@ -107,7 +107,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Engine Management Light</Text>
          <Image source={require('../assets/images/Amber/emissions_control_lamp_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          1. Does the lamp flash or light permanently? Permanently: Remove the key for 30 seconds then refit and start the
@@ -121,7 +121,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Engine Oil Level</Text>
          <Image source={require('../assets/images/Amber/engine_oil_level_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          A yellow engine oil level light means you should stop the car as soon as it's safe to. Is the lamp lit continuously
@@ -134,7 +134,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Tank Cap Yellow Warning</Text>
          <Image source={require('../assets/images/Amber/fuel_tank_cap_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          The fuel tank cap has not been properly closed.  When safe to do so, pull over and securely close the cap. 
@@ -146,7 +146,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Low Fuel Level</Text>
          <Image source={require('../assets/images/Amber/low_fuel_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          The fuel in the fuel tank has reached the reserve level. Drive to a filling station without delay and put fuel into the
@@ -159,7 +159,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Power Steering System</Text>
          <Image source={require('../assets/images/Amber/power_steering_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          1. Has the battery been disconnected, discharged or vehicle jump started? Yes: Turn the steering wheel fully left, 
@@ -176,7 +176,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Bulb Monitoring</Text>
          <Image source={require('../assets/images/Amber/bulb_monitoring_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          Check the operation of all exterior bulbs. Have the defective bulb replaced without delay.
@@ -187,7 +187,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Brake Lights</Text>
          <Image source={require('../assets/images/Amber/brake_lights_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          This warning lamp appears when an exterior brake light bulb is defective. Check the operation of all the exterior 
@@ -199,7 +199,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Headlight Range Control</Text>
          <Image source={require('../assets/images/Amber/headlight_range_control_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          There is a fault in the headlight range control system. Please contact an authorised mechanic.
@@ -210,7 +210,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Lane Assist</Text>
          <Image source={require('../assets/images/Amber/lane_assist_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          This indicator light comes on when the lane assist system is switched on and road markings cannot be detected. 
@@ -222,7 +222,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Rain & Light Sensor</Text>
          <Image source={require('../assets/images/Amber/rain-and-light-sensor-update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          The wipers and lights will not function automatically but will still function manually. 
@@ -234,7 +234,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Rear Fog Lights</Text>
          <Image source={require('../assets/images/Amber/rear_fog_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          This warning lamp signifies that the rear fog lamp is switched on. Only operate the rear fog lamp in foggy conditions 
@@ -246,7 +246,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Rear Spoiler</Text>
          <Image source={require('../assets/images/Amber/rear_spoiler_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          There is a fault in the rear spoiler system. Please contact an authorised mechanic. Do not exceed 120 km/h.
@@ -257,7 +257,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>  Windscreen Washer Fluid Level</Text>
          <Image source={require('../assets/images/Amber/wind_screen_washer_fluid_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
         The windscreen washer fluid reservoir is nearly empty. Top up the fluid for the windscreen washer 
@@ -269,7 +269,7 @@ export default function AmberFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
         <Text style={styles.title}>Adaptive Light System</Text>
          <Image source={require('../assets/images/Amber/adaptive_light_system_update.jpg')}
-         style = {{height: 250, width: 200, resizeMode : 'stretch',}} />
+         style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>
          The headlights will not dip automatically. The dipped headlights will still operate manually. 

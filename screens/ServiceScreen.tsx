@@ -9,6 +9,14 @@ const Separator = () => (
   <View style={styles.separator} />
 );
 
+const Separator2 = () => (
+  <View style={styles.separator2} />
+);
+
+const Separator3 = () => (
+  <View style={styles.separator3} />
+);
+
 export default function ServiceScreen({ navigation }: RootTabScreenProps<'Service'>) {
   {/* Make A Phone Call */}
   const makeCall = () => {
@@ -30,44 +38,47 @@ export default function ServiceScreen({ navigation }: RootTabScreenProps<'Servic
   
       {/* <Text style={styles.title}>Roadside Assistance Numbers</Text> */}
     
+      <Separator3 />
+
       <Text style={styles.title}>AA Roadside Assistance</Text>
       <Pressable style={styles.button}>
       <Text style={styles.text}>0818 66 77 88</Text>
       </Pressable>
      
-      <Separator />
+      <Separator2 />
       <Text style={styles.title}>Police Service Number</Text>
       <Pressable style={styles.button} >
       <Text style={styles.text}>111 or 222</Text>
       </Pressable>
 
-      <Separator />
+      <Separator2 />
 
       <Text style={styles.title}>Fire Service Number</Text>
       <Pressable style={styles.button} >
       <Text style={styles.text}>111 or 222</Text>
       </Pressable>
 
-      <Separator />
+      <Separator2 />
 
       <Text style={styles.title}>Ambulance Service Number</Text>
       <Pressable style={styles.button} >
       <Text style={styles.text}>111 or 222</Text>
       </Pressable>
 
-      <Separator />
+      <Separator2 />
 
       <Text style={styles.title}>Irish Towing Service Number</Text>
       <Pressable style={styles.button}>
       <Text style={styles.text}>01 429 8483</Text>
       </Pressable>
 
-      <Separator />
+      <Separator2 />
 
-      <Text style={styles.title}>Ring Any Number</Text>
+      <Text style={styles.title}>Ring Any Number Now!</Text>
       <Pressable onPress={makeCall} style={styles.touchableButton} >
-          <Text style={styles.TextStyle}> Click Here To Dial</Text>
+          <Text style={styles.TextStyle}> Click Here To Ring</Text>
         </Pressable>
+        <Separator/>
     </View>
     </ScrollView>
   );
@@ -89,10 +100,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   separator: {
-    marginVertical: 18,
+    marginVertical: 23,
     alignItems: 'center',
     justifyContent:'center', 
     flex: 1,
+  },
+  separator2: {
+    marginVertical: 18,
+    alignItems: 'center',
+    justifyContent:'center', 
+  },
+  separator3: {
+    marginVertical: 8,
+    alignItems: 'center',
+    justifyContent:'center', 
   },
   linkText: {
     fontSize: 14,
@@ -116,6 +137,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: '#17A99A',
+    width: '65%',
   },
   touchableButton: {
     alignItems: 'center',
@@ -125,10 +147,12 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: '#17A99A',
+    width: '65%',
   },
   TextStyle: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 22,
     textAlign: 'center',
+    alignItems: 'center',
   },
 });
