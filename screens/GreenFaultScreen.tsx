@@ -27,7 +27,7 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
 
           <Separator/>
 
-        <Text style={styles.title}>Cruise control</Text>
+        <Text style={styles.title}>Cruise Control</Text>
          <Image source={require('../assets/images/Green/cruise_control_update.jpg')}
          style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
@@ -54,7 +54,7 @@ export default function GreenFaultScreen({ navigation }: RootTabScreenProps<'Hom
         <Separator/>
 
         <Text style={styles.title}>Lane Assist</Text>
-         <Image source={require('../assets/images/Green/lane_assist_green.jpg')}
+         <Image source={require('../assets/images/Green/lane_assist_green_update.jpg')}
          style = {{height: 200, width: 250,resizeMode : 'stretch',}} />
          <View style={styles.box}>
          <Text style={styles.text}>

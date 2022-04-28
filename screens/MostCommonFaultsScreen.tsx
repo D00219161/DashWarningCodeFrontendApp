@@ -63,7 +63,7 @@ export default function MostCommonFaultsScreen({ navigation }: RootTabScreenProp
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
       <Image source={require('../assets/images/Green/electronic_parking_brake_update.jpg')}
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
-      <Image source={require('../assets/images/Green/lane_assist_green.jpg')}
+      <Image source={require('../assets/images/Green/lane_assist_green_update.jpg')}
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />   
       <Image source={require('../assets/images/Green/Automatic_Shift_Lock_Light.jpg')}
       style = {{height: 200, width: 250, justifyContent:'space-between', marginBottom: 10, resizeMode : 'stretch',}} />
